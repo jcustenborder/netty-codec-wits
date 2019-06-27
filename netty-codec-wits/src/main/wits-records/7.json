@@ -1,0 +1,188 @@
+{
+  "name" : "SurveyDirectionalRecord",
+  "documentation" : "Data acquired in real-time by MWD tools or entered manually from other sources",
+  "recordId" : 7,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthSvyReadingMeas",
+    "documentation" : "Depth Svy/reading (meas)",
+    "longMnemonic" : "DEPTSVYM",
+    "shortMnemonic" : "DSVM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthSvyReadingVert",
+    "documentation" : "Depth Svy/reading (vert)",
+    "longMnemonic" : "DEPTSVYV",
+    "shortMnemonic" : "DSVV"
+  }, {
+    "fieldId" : 10,
+    "type" : "SHORT",
+    "name" : "passNumber",
+    "documentation" : "Pass Number",
+    "longMnemonic" : "PASSNUM",
+    "shortMnemonic" : "PASS"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 12,
+    "type" : "STRING",
+    "name" : "svyType",
+    "documentation" : "Svy Type",
+    "longMnemonic" : "SVYTYPE",
+    "shortMnemonic" : "STYP"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "svyInclination",
+    "documentation" : "Svy Inclination",
+    "longMnemonic" : "SVYINC",
+    "shortMnemonic" : "SINC"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "svyAzimuthUncorrected",
+    "documentation" : "Svy Azimuth (uncorrected)",
+    "longMnemonic" : "SVYAZU",
+    "shortMnemonic" : "SAZU"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "svyAzimuthCorrected",
+    "documentation" : "Svy Azimuth (corrected)",
+    "longMnemonic" : "SVYAZC",
+    "shortMnemonic" : "SAZC"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "svyMagneticToolface",
+    "documentation" : "Svy Magnetic Toolface",
+    "longMnemonic" : "SVYMTF",
+    "shortMnemonic" : "SMTF"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "svyGravityToolface",
+    "documentation" : "Svy Gravity Toolface",
+    "longMnemonic" : "SVYGTF",
+    "shortMnemonic" : "SGTF"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "svyNorthSouthPosition",
+    "documentation" : "Svy North-South Position",
+    "longMnemonic" : "SVYNS",
+    "shortMnemonic" : "SNS"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "svyEastWestPosition",
+    "documentation" : "Svy East-West Position",
+    "longMnemonic" : "SVYEW",
+    "shortMnemonic" : "SEW"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "svyDogLegSeverity",
+    "documentation" : "Svy Dog Leg Severity",
+    "longMnemonic" : "SVYDLS",
+    "shortMnemonic" : "SDLS"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "svyRateOfWalk",
+    "documentation" : "Svy Rate of Walk",
+    "longMnemonic" : "SVYWALK",
+    "shortMnemonic" : "SWLK"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

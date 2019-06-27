@@ -1,0 +1,202 @@
+{
+  "name" : "ChromatographGasesCycleBasedRecord",
+  "documentation" : "Data acquired in real-time from each valid chomatograph cycle. Not sent if no circulation is taking place",
+  "recordId" : 12,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthChromSampleMeas",
+    "documentation" : "Depth Chrom Sample (meas)",
+    "longMnemonic" : "DEPTCHRM",
+    "shortMnemonic" : "DCHM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthChromSampleVert",
+    "documentation" : "Depth Chrom Sample (vert)",
+    "longMnemonic" : "DEPTCHRV",
+    "shortMnemonic" : "DCHV"
+  }, {
+    "fieldId" : 10,
+    "type" : "LONG",
+    "name" : "dateChromSample",
+    "documentation" : "Date Chrom Sample",
+    "longMnemonic" : "DATECHR",
+    "shortMnemonic" : "DCHR"
+  }, {
+    "fieldId" : 11,
+    "type" : "LONG",
+    "name" : "timeChromSample",
+    "documentation" : "Time Chrom Sample",
+    "longMnemonic" : "TIMECHR",
+    "shortMnemonic" : "TCHR"
+  }, {
+    "fieldId" : 12,
+    "type" : "LONG",
+    "name" : "methaneC1",
+    "documentation" : "Methane (C1)",
+    "longMnemonic" : "METHANE",
+    "shortMnemonic" : "METH"
+  }, {
+    "fieldId" : 13,
+    "type" : "LONG",
+    "name" : "ethaneC2",
+    "documentation" : "Ethane (C2)",
+    "longMnemonic" : "ETHANE",
+    "shortMnemonic" : "ETH"
+  }, {
+    "fieldId" : 14,
+    "type" : "LONG",
+    "name" : "propaneC3",
+    "documentation" : "Propane (C3)",
+    "longMnemonic" : "PROPANE",
+    "shortMnemonic" : "PRP"
+  }, {
+    "fieldId" : 15,
+    "type" : "LONG",
+    "name" : "isoButaneIc4",
+    "documentation" : "Iso-Butane (IC4)",
+    "longMnemonic" : "IBUTANE",
+    "shortMnemonic" : "IBUT"
+  }, {
+    "fieldId" : 16,
+    "type" : "LONG",
+    "name" : "norButaneNc4",
+    "documentation" : "Nor-Butane (NC4)",
+    "longMnemonic" : "NBUTANE",
+    "shortMnemonic" : "NBUT"
+  }, {
+    "fieldId" : 17,
+    "type" : "LONG",
+    "name" : "isoPentaneIc5",
+    "documentation" : "Iso-Pentane (IC5)",
+    "longMnemonic" : "IPENTANE",
+    "shortMnemonic" : "IPEN"
+  }, {
+    "fieldId" : 18,
+    "type" : "LONG",
+    "name" : "norPentaneNc5",
+    "documentation" : "Nor-Pentane (NC5)",
+    "longMnemonic" : "NPENTANE",
+    "shortMnemonic" : "NPEN"
+  }, {
+    "fieldId" : 19,
+    "type" : "LONG",
+    "name" : "neoPentaneEc5",
+    "documentation" : "Neo-Pentane (EC5)",
+    "longMnemonic" : "EPENTANE",
+    "shortMnemonic" : "EPEN"
+  }, {
+    "fieldId" : 20,
+    "type" : "LONG",
+    "name" : "isoHexaneIc6",
+    "documentation" : "Iso-Hexane (IC6)",
+    "longMnemonic" : "IHEXANE",
+    "shortMnemonic" : "IHEX"
+  }, {
+    "fieldId" : 21,
+    "type" : "LONG",
+    "name" : "norHexaneNc6",
+    "documentation" : "Nor-Hexane (NC6)",
+    "longMnemonic" : "NHEXANE",
+    "shortMnemonic" : "NHEX"
+  }, {
+    "fieldId" : 22,
+    "type" : "LONG",
+    "name" : "carbonDioxide",
+    "documentation" : "Carbon Dioxide",
+    "longMnemonic" : "CO2",
+    "shortMnemonic" : "CO2"
+  }, {
+    "fieldId" : 23,
+    "type" : "LONG",
+    "name" : "acetylene",
+    "documentation" : "Acetylene",
+    "longMnemonic" : "ACET",
+    "shortMnemonic" : "ACET"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

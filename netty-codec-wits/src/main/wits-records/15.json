@@ -1,0 +1,419 @@
+{
+  "name" : "CuttingsLithologyRecord",
+  "documentation" : "Manually-entered data from sample examination sent when new data values are available",
+  "recordId" : 15,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthSampleMeas",
+    "documentation" : "Depth Sample (meas)",
+    "longMnemonic" : "DEPTSAMM",
+    "shortMnemonic" : "DSAM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthSampleVert",
+    "documentation" : "Depth Sample (vert)",
+    "longMnemonic" : "DEPTSAMV",
+    "shortMnemonic" : "DSAV"
+  }, {
+    "fieldId" : 10,
+    "type" : "STRING",
+    "name" : "descriptionType",
+    "documentation" : "Description type",
+    "longMnemonic" : "DESCTYPE",
+    "shortMnemonic" : "DESC"
+  }, {
+    "fieldId" : 11,
+    "type" : "STRING",
+    "name" : "lith1Type",
+    "documentation" : "Lith 1 type",
+    "longMnemonic" : "L1TYPE",
+    "shortMnemonic" : "L1TY"
+  }, {
+    "fieldId" : 12,
+    "type" : "SHORT",
+    "name" : "lith1",
+    "documentation" : "Lith 1 %",
+    "longMnemonic" : "L1PERC",
+    "shortMnemonic" : "L1PC"
+  }, {
+    "fieldId" : 13,
+    "type" : "STRING",
+    "name" : "lith1Classification",
+    "documentation" : "Lith 1 classification",
+    "longMnemonic" : "L1CLASS",
+    "shortMnemonic" : "L1CL"
+  }, {
+    "fieldId" : 14,
+    "type" : "STRING",
+    "name" : "lith1Color",
+    "documentation" : "Lith 1 color",
+    "longMnemonic" : "L1COLOR",
+    "shortMnemonic" : "L1CO"
+  }, {
+    "fieldId" : 15,
+    "type" : "STRING",
+    "name" : "lith1Texture",
+    "documentation" : "Lith 1 texture",
+    "longMnemonic" : "L1TEXT",
+    "shortMnemonic" : "L1TX"
+  }, {
+    "fieldId" : 16,
+    "type" : "STRING",
+    "name" : "lith1Hardness",
+    "documentation" : "Lith 1 hardness",
+    "longMnemonic" : "L1HARD",
+    "shortMnemonic" : "L1HD"
+  }, {
+    "fieldId" : 17,
+    "type" : "STRING",
+    "name" : "lith1GrainSize",
+    "documentation" : "Lith 1 grain size",
+    "longMnemonic" : "L1SIZE",
+    "shortMnemonic" : "L1SZ"
+  }, {
+    "fieldId" : 18,
+    "type" : "STRING",
+    "name" : "lith1Roundness",
+    "documentation" : "Lith 1 roundness",
+    "longMnemonic" : "L1ROUND",
+    "shortMnemonic" : "L1RD"
+  }, {
+    "fieldId" : 19,
+    "type" : "STRING",
+    "name" : "lith1Sorting",
+    "documentation" : "Lith 1 sorting",
+    "longMnemonic" : "L1SORT",
+    "shortMnemonic" : "L1SO"
+  }, {
+    "fieldId" : 20,
+    "type" : "STRING",
+    "name" : "lith1MatrixCement",
+    "documentation" : "Lith 1 matrix/cement",
+    "longMnemonic" : "L1MATCEM",
+    "shortMnemonic" : "L1MC"
+  }, {
+    "fieldId" : 21,
+    "type" : "STRING",
+    "name" : "lith1Accessories",
+    "documentation" : "Lith 1 accessories",
+    "longMnemonic" : "L1ACC",
+    "shortMnemonic" : "L1AC"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "lith1Porosity",
+    "documentation" : "Lith 1 porosity",
+    "longMnemonic" : "L1POR",
+    "shortMnemonic" : "L1PO"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "lith1Permeability",
+    "documentation" : "Lith 1 permeability",
+    "longMnemonic" : "L1PERM",
+    "shortMnemonic" : "L1PE"
+  }, {
+    "fieldId" : 24,
+    "type" : "STRING",
+    "name" : "lith2Type",
+    "documentation" : "Lith 2 type",
+    "longMnemonic" : "L2TYPE",
+    "shortMnemonic" : "L2TY"
+  }, {
+    "fieldId" : 25,
+    "type" : "SHORT",
+    "name" : "lith2",
+    "documentation" : "Lith 2 %",
+    "longMnemonic" : "L2PERC",
+    "shortMnemonic" : "L2PC"
+  }, {
+    "fieldId" : 26,
+    "type" : "STRING",
+    "name" : "lith2Classification",
+    "documentation" : "Lith 2 classification",
+    "longMnemonic" : "L2CLASS",
+    "shortMnemonic" : "L2CL"
+  }, {
+    "fieldId" : 27,
+    "type" : "STRING",
+    "name" : "lith2Color",
+    "documentation" : "Lith 2 color",
+    "longMnemonic" : "L2COLOR",
+    "shortMnemonic" : "L2CO"
+  }, {
+    "fieldId" : 28,
+    "type" : "STRING",
+    "name" : "lith2Texture",
+    "documentation" : "Lith 2 texture",
+    "longMnemonic" : "L2TEXT",
+    "shortMnemonic" : "L2TX"
+  }, {
+    "fieldId" : 29,
+    "type" : "STRING",
+    "name" : "lith2Hardness",
+    "documentation" : "Lith 2 hardness",
+    "longMnemonic" : "L2HARD",
+    "shortMnemonic" : "L2HD"
+  }, {
+    "fieldId" : 30,
+    "type" : "STRING",
+    "name" : "lith2GrainSize",
+    "documentation" : "Lith 2 grain size",
+    "longMnemonic" : "L2SIZE",
+    "shortMnemonic" : "L2SZ"
+  }, {
+    "fieldId" : 31,
+    "type" : "STRING",
+    "name" : "lith2Roundness",
+    "documentation" : "Lith 2 roundness",
+    "longMnemonic" : "L2ROUND",
+    "shortMnemonic" : "L2RD"
+  }, {
+    "fieldId" : 32,
+    "type" : "STRING",
+    "name" : "lith2Sorting",
+    "documentation" : "Lith 2 sorting",
+    "longMnemonic" : "L2SORT",
+    "shortMnemonic" : "L2SO"
+  }, {
+    "fieldId" : 33,
+    "type" : "STRING",
+    "name" : "lith2MatrixCement",
+    "documentation" : "Lith 2 matrix/cement",
+    "longMnemonic" : "L2MATCEM",
+    "shortMnemonic" : "L2MC"
+  }, {
+    "fieldId" : 34,
+    "type" : "STRING",
+    "name" : "lith2Accessories",
+    "documentation" : "Lith 2 accessories",
+    "longMnemonic" : "L2ACC",
+    "shortMnemonic" : "L2AC"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "lith2Porosity",
+    "documentation" : "Lith 2 porosity",
+    "longMnemonic" : "L2POR",
+    "shortMnemonic" : "L2PO"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "lith2Permeability",
+    "documentation" : "Lith 2 permeability",
+    "longMnemonic" : "L2PERM",
+    "shortMnemonic" : "L2PE"
+  }, {
+    "fieldId" : 37,
+    "type" : "STRING",
+    "name" : "lith3Type",
+    "documentation" : "Lith 3 type",
+    "longMnemonic" : "L3TYPE",
+    "shortMnemonic" : "L3TY"
+  }, {
+    "fieldId" : 38,
+    "type" : "SHORT",
+    "name" : "lith3",
+    "documentation" : "Lith 3 %",
+    "longMnemonic" : "L3PERC",
+    "shortMnemonic" : "L3PC"
+  }, {
+    "fieldId" : 39,
+    "type" : "STRING",
+    "name" : "lith3Classification",
+    "documentation" : "Lith 3 classification",
+    "longMnemonic" : "L3CLASS",
+    "shortMnemonic" : "L3CL"
+  }, {
+    "fieldId" : 40,
+    "type" : "STRING",
+    "name" : "lith4Type",
+    "documentation" : "Lith 4 type",
+    "longMnemonic" : "L4TYPE",
+    "shortMnemonic" : "L4TY"
+  }, {
+    "fieldId" : 41,
+    "type" : "SHORT",
+    "name" : "lith4",
+    "documentation" : "Lith 4 %",
+    "longMnemonic" : "L4PERC",
+    "shortMnemonic" : "L4PC"
+  }, {
+    "fieldId" : 42,
+    "type" : "STRING",
+    "name" : "lith4Classification",
+    "documentation" : "Lith 4 classification",
+    "longMnemonic" : "L4CLASS",
+    "shortMnemonic" : "L4CL"
+  }, {
+    "fieldId" : 43,
+    "type" : "STRING",
+    "name" : "lith5Type",
+    "documentation" : "Lith 5 type",
+    "longMnemonic" : "L5TYPE",
+    "shortMnemonic" : "L5TY"
+  }, {
+    "fieldId" : 44,
+    "type" : "SHORT",
+    "name" : "lith5",
+    "documentation" : "Lith 5 %",
+    "longMnemonic" : "L5PERC",
+    "shortMnemonic" : "L5PC"
+  }, {
+    "fieldId" : 45,
+    "type" : "STRING",
+    "name" : "lith5Classification",
+    "documentation" : "Lith 5 classification",
+    "longMnemonic" : "L5CLASS",
+    "shortMnemonic" : "L5CL"
+  }, {
+    "fieldId" : 46,
+    "type" : "STRING",
+    "name" : "fossils",
+    "documentation" : "Fossils",
+    "longMnemonic" : "FOSS",
+    "shortMnemonic" : "FOSS"
+  }, {
+    "fieldId" : 47,
+    "type" : "STRING",
+    "name" : "compositeShow",
+    "documentation" : "Composite Show",
+    "longMnemonic" : "COMPSHOW",
+    "shortMnemonic" : "SHOW"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "bulkDensity",
+    "documentation" : "Bulk Density",
+    "longMnemonic" : "BULKDEN",
+    "shortMnemonic" : "BDEN"
+  }, {
+    "fieldId" : 49,
+    "type" : "FLOAT",
+    "name" : "cuttingsGas",
+    "documentation" : "Cuttings Gas",
+    "longMnemonic" : "GASCUTT",
+    "shortMnemonic" : "GCUT"
+  }, {
+    "fieldId" : 50,
+    "type" : "FLOAT",
+    "name" : "calcimetryCalcite",
+    "documentation" : "Calcimetry Calcite %",
+    "longMnemonic" : "CCAL",
+    "shortMnemonic" : "CCAL"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "calcimetryDolomite",
+    "documentation" : "Calcimetry Dolomite %",
+    "longMnemonic" : "CDOL",
+    "shortMnemonic" : "CDOL"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "cuttingsCec",
+    "documentation" : "Cuttings CEC",
+    "longMnemonic" : "CEC",
+    "shortMnemonic" : "CEC"
+  }, {
+    "fieldId" : 53,
+    "type" : "SHORT",
+    "name" : "cavings",
+    "documentation" : "Cavings %",
+    "longMnemonic" : "CAVINGS",
+    "shortMnemonic" : "CAV"
+  }, {
+    "fieldId" : 54,
+    "type" : "FLOAT",
+    "name" : "shaleDensity",
+    "documentation" : "Shale Density",
+    "longMnemonic" : "SHALEDEN",
+    "shortMnemonic" : "SDEN"
+  }, {
+    "fieldId" : 55,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 56,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 57,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 58,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 59,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

@@ -1,0 +1,391 @@
+{
+  "name" : "MWDFormationEvaluationRecord",
+  "documentation" : "",
+  "recordId" : 8,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthBitMeas",
+    "documentation" : "Depth Bit  (meas)",
+    "longMnemonic" : "DEPTBITM",
+    "shortMnemonic" : "DBTM"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthBitVert",
+    "documentation" : "Depth Bit  (vert)",
+    "longMnemonic" : "DEPTBITV",
+    "shortMnemonic" : "DBTV"
+  }, {
+    "fieldId" : 12,
+    "type" : "SHORT",
+    "name" : "passNumber",
+    "documentation" : "Pass Number",
+    "longMnemonic" : "PASSNUM",
+    "shortMnemonic" : "PASS"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "depthResis1SensorMeas",
+    "documentation" : "Depth Resis 1 sensor (meas)",
+    "longMnemonic" : "DEPTRS1M",
+    "shortMnemonic" : "DR1M"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "depthResis1SensorVert",
+    "documentation" : "Depth Resis 1 sensor (vert)",
+    "longMnemonic" : "DEPTRS1V",
+    "shortMnemonic" : "DR1V"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "resis1Reading",
+    "documentation" : "Resis 1 reading",
+    "longMnemonic" : "MR1",
+    "shortMnemonic" : "MR1"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "resis1BoreholeCorr",
+    "documentation" : "Resis 1 (borehole corr)",
+    "longMnemonic" : "MR1C",
+    "shortMnemonic" : "MR1C"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "depthResis2SensorMeas",
+    "documentation" : "Depth Resis 2 sensor (meas)",
+    "longMnemonic" : "DEPTRS2M",
+    "shortMnemonic" : "DR2M"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "depthResis2SensorVert",
+    "documentation" : "Depth Resis 2 sensor (vert)",
+    "longMnemonic" : "DEPTRS2V",
+    "shortMnemonic" : "DR2V"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "resis2Reading",
+    "documentation" : "Resis 2 reading",
+    "longMnemonic" : "MR2",
+    "shortMnemonic" : "MR2"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "resis2BoreholeCorr",
+    "documentation" : "Resis 2 (borehole corr)",
+    "longMnemonic" : "MR2C",
+    "shortMnemonic" : "MR2C"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "depthGRay1SensorMeas",
+    "documentation" : "Depth G.Ray 1 sensor(meas)",
+    "longMnemonic" : "DEPTGR1M",
+    "shortMnemonic" : "DG1M"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "depthGRay1SensorVert",
+    "documentation" : "Depth G.Ray 1 sensor(vert)",
+    "longMnemonic" : "DEPTGR1V",
+    "shortMnemonic" : "DG1V"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "gammaRay1Reading",
+    "documentation" : "Gamma Ray 1 reading",
+    "longMnemonic" : "MG1",
+    "shortMnemonic" : "MG1"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "gammaRay1BoreholeCorr",
+    "documentation" : "Gamma Ray 1(borehole corr)",
+    "longMnemonic" : "MG1C",
+    "shortMnemonic" : "MG1C"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "depthGRay2SensorMeas",
+    "documentation" : "Depth G.Ray 2 sensor(meas)",
+    "longMnemonic" : "DEPTGR2M",
+    "shortMnemonic" : "DG2M"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "depthGRay2SensorVert",
+    "documentation" : "Depth G.Ray 2 sensor(vert)",
+    "longMnemonic" : "DEPTGR2V",
+    "shortMnemonic" : "DG2V"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "gammaRay2Reading",
+    "documentation" : "Gamma Ray 2 reading",
+    "longMnemonic" : "MG2",
+    "shortMnemonic" : "MG2"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "gammaRay2BoreholeCorr",
+    "documentation" : "Gamma Ray 2(borehole corr)",
+    "longMnemonic" : "MG2C",
+    "shortMnemonic" : "MG2C"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "depthPor1SensorMeas",
+    "documentation" : "Depth Por 1 sensor (meas)",
+    "longMnemonic" : "DEPTP1M",
+    "shortMnemonic" : "DP1M"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "depthPor1SensorVert",
+    "documentation" : "Depth Por 1 sensor (vert)",
+    "longMnemonic" : "DEPTP1V",
+    "shortMnemonic" : "DP1V"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "porosityTool1Reading",
+    "documentation" : "Porosity Tool 1 reading",
+    "longMnemonic" : "MPO1",
+    "shortMnemonic" : "MPO1"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "depthPor2SensorMeas",
+    "documentation" : "Depth Por 2 sensor (meas)",
+    "longMnemonic" : "DEPTP2M",
+    "shortMnemonic" : "DP2M"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "depthPor2SensorVert",
+    "documentation" : "Depth Por 2 sensor (vert)",
+    "longMnemonic" : "DEPTP2V",
+    "shortMnemonic" : "DP2V"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "porosityTool2Reading",
+    "documentation" : "Porosity Tool 2 reading",
+    "longMnemonic" : "MPO2",
+    "shortMnemonic" : "MPO2"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "downholeFluidTempAnn",
+    "documentation" : "Downhole Fluid Temp (ann)",
+    "longMnemonic" : "MFTANN",
+    "shortMnemonic" : "MFTA"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "downholeFluidTempPipe",
+    "documentation" : "Downhole Fluid Temp (pipe)",
+    "longMnemonic" : "MFTPIPE",
+    "shortMnemonic" : "MFTP"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "downholeFluidResisAnn",
+    "documentation" : "Downhole Fluid Resis (ann)",
+    "longMnemonic" : "MFRANN",
+    "shortMnemonic" : "MFRA"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "downholeFluidResisPipe",
+    "documentation" : "Downhole Fluid Resis (pipe)",
+    "longMnemonic" : "MFRPIPE",
+    "shortMnemonic" : "MFRP"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "depthFormDensityMeas",
+    "documentation" : "Depth Form Density (meas)",
+    "longMnemonic" : "DEPTFDM",
+    "shortMnemonic" : "DFDM"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "depthFormDensityVert",
+    "documentation" : "Depth Form Density (vert)",
+    "longMnemonic" : "DEPTFDV",
+    "shortMnemonic" : "DFDV"
+  }, {
+    "fieldId" : 41,
+    "type" : "FLOAT",
+    "name" : "formationDensity",
+    "documentation" : "Formation Density",
+    "longMnemonic" : "MFD",
+    "shortMnemonic" : "MFD"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "depthCaliperMeas",
+    "documentation" : "Depth Caliper (meas)",
+    "longMnemonic" : "DEPTCALM",
+    "shortMnemonic" : "DCLM"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "depthCaliperVert",
+    "documentation" : "Depth Caliper (vert)",
+    "longMnemonic" : "DEPTCALV",
+    "shortMnemonic" : "DCLV"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "caliper",
+    "documentation" : "Caliper",
+    "longMnemonic" : "MCLP",
+    "shortMnemonic" : "MCLP"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "porePressureGradMwd",
+    "documentation" : "Pore Pressure Grad MWD",
+    "longMnemonic" : "MFPP",
+    "shortMnemonic" : "MFPP"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "fracPressureGradMwd",
+    "documentation" : "Frac Pressure Grad MWD",
+    "longMnemonic" : "MFFP",
+    "shortMnemonic" : "MFFP"
+  }, {
+    "fieldId" : 47,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 49,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 50,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "spare6",
+    "documentation" : "SPARE 6",
+    "longMnemonic" : "SPARE6",
+    "shortMnemonic" : "SPR6"
+  }, {
+    "fieldId" : 53,
+    "type" : "FLOAT",
+    "name" : "spare7",
+    "documentation" : "SPARE 7",
+    "longMnemonic" : "SPARE7",
+    "shortMnemonic" : "SPR7"
+  }, {
+    "fieldId" : 54,
+    "type" : "FLOAT",
+    "name" : "spare8",
+    "documentation" : "SPARE 8",
+    "longMnemonic" : "SPARE8",
+    "shortMnemonic" : "SPR8"
+  }, {
+    "fieldId" : 55,
+    "type" : "FLOAT",
+    "name" : "spare9",
+    "documentation" : "SPARE 9",
+    "longMnemonic" : "SPARE9",
+    "shortMnemonic" : "SPR9"
+  } ]
+}

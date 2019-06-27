@@ -1,0 +1,279 @@
+{
+  "name" : "HydraulicsRecord",
+  "documentation" : "Data acquired in real-time while circulating drilling fluid.  Not sent if no circulation is taking place.  Minimum and maximum values reset when record is transmitted.  Other items should reflect the input and output variables used in the most recent hydraulics calculation prior to transmission.",
+  "recordId" : 4,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthBitMeas",
+    "documentation" : "Depth Bit  (meas)",
+    "longMnemonic" : "DEPTBITM",
+    "shortMnemonic" : "DBTM"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthBitVert",
+    "documentation" : "Depth Bit  (vert)",
+    "longMnemonic" : "DEPTBITV",
+    "shortMnemonic" : "DBTV"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "mudDensityInAvg",
+    "documentation" : "Mud Density In (avg)",
+    "longMnemonic" : "MDIA",
+    "shortMnemonic" : "MDIA"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "mudFlowInAvg",
+    "documentation" : "Mud Flow In (avg)",
+    "longMnemonic" : "MFIA",
+    "shortMnemonic" : "MFIA"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "standpipePressureAvg",
+    "documentation" : "Standpipe Pressure (avg)",
+    "longMnemonic" : "SPPA",
+    "shortMnemonic" : "SPPA"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "plasticViscosity",
+    "documentation" : "Plastic Viscosity",
+    "longMnemonic" : "PV",
+    "shortMnemonic" : "PV"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "yieldPoint",
+    "documentation" : "Yield Point",
+    "longMnemonic" : "YP",
+    "shortMnemonic" : "YP"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "pressureLossBit",
+    "documentation" : "Pressure Loss - bit",
+    "longMnemonic" : "PLB",
+    "shortMnemonic" : "PLB"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "pressureLossString",
+    "documentation" : "Pressure Loss - string",
+    "longMnemonic" : "PLDS",
+    "shortMnemonic" : "PLDS"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "pressureLossAnnulus",
+    "documentation" : "Pressure Loss - annulus",
+    "longMnemonic" : "PLA",
+    "shortMnemonic" : "PLA"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "pressureLossSurface",
+    "documentation" : "Pressure Loss - surface",
+    "longMnemonic" : "PLSU",
+    "shortMnemonic" : "PLSU"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "pressureLossMudMotor",
+    "documentation" : "Pressure Loss - mud motor",
+    "longMnemonic" : "PLMM",
+    "shortMnemonic" : "PLMM"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "pressureLossMwdTool",
+    "documentation" : "Pressure Loss - MWD tool",
+    "longMnemonic" : "PLMWD",
+    "shortMnemonic" : "PLMW"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "pressureLossAtBit",
+    "documentation" : "Pressure Loss - % at bit",
+    "longMnemonic" : "PLPB",
+    "shortMnemonic" : "PLPB"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "bitHydraulicPower",
+    "documentation" : "Bit Hydraulic Power",
+    "longMnemonic" : "BHP",
+    "shortMnemonic" : "BHP"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "bitHydraulicPowerArea",
+    "documentation" : "Bit Hydraulic Power/Area",
+    "longMnemonic" : "BHPA",
+    "shortMnemonic" : "BHPA"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "jetImpactForce",
+    "documentation" : "Jet Impact Force",
+    "longMnemonic" : "JIF",
+    "shortMnemonic" : "JIF"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "jetVelocity",
+    "documentation" : "Jet Velocity",
+    "longMnemonic" : "JV",
+    "shortMnemonic" : "JV"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "annularVelocityMin",
+    "documentation" : "Annular Velocity (min)",
+    "longMnemonic" : "AVELN",
+    "shortMnemonic" : "AVN"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "annularVelocityMax",
+    "documentation" : "Annular Velocity (max)",
+    "longMnemonic" : "AVELX",
+    "shortMnemonic" : "AVX"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "ecdAtTotalDepth",
+    "documentation" : "ECD at Total Depth",
+    "longMnemonic" : "ECDTD",
+    "shortMnemonic" : "ECDT"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "ecdAtBit",
+    "documentation" : "ECD at Bit",
+    "longMnemonic" : "ECDBIT",
+    "shortMnemonic" : "ECDB"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "ecdAtCasingShoe",
+    "documentation" : "ECD at Casing Shoe",
+    "longMnemonic" : "ECDCSG",
+    "shortMnemonic" : "ECDC"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "pumpHydraulicPower",
+    "documentation" : "Pump Hydraulic Power",
+    "longMnemonic" : "PHP",
+    "shortMnemonic" : "PHP"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "calcObsPressLossRatio",
+    "documentation" : "Calc/Obs Press.Loss ratio",
+    "longMnemonic" : "PLCO",
+    "shortMnemonic" : "PLCO"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

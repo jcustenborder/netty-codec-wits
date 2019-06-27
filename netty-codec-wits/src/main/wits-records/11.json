@@ -1,0 +1,251 @@
+{
+  "name" : "MudTankVolumeRecord",
+  "documentation" : "Data acquired in real-time and computed over the trigger interval; record transmitted and computations reset when triggering interval occurs",
+  "recordId" : 11,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "tankVolumeTotal",
+    "documentation" : "Tank Volume (total)",
+    "longMnemonic" : "TVOLTOT",
+    "shortMnemonic" : "TVT"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "tankVolumeActive",
+    "documentation" : "Tank Volume (active)",
+    "longMnemonic" : "TVOLACT",
+    "shortMnemonic" : "TVA"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "tankVolumeChangeTotal",
+    "documentation" : "Tank Volume Change (total)",
+    "longMnemonic" : "TVOLCTOT",
+    "shortMnemonic" : "TVCT"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "tankVolumeChangeActive",
+    "documentation" : "Tank Volume Change (active)",
+    "longMnemonic" : "TVOLCACT",
+    "shortMnemonic" : "TVCA"
+  }, {
+    "fieldId" : 14,
+    "type" : "LONG",
+    "name" : "tankVolumeResetTime",
+    "documentation" : "Tank Volume Reset Time",
+    "longMnemonic" : "TVRESET",
+    "shortMnemonic" : "TVRT"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "tank01Volume",
+    "documentation" : "Tank 01 Volume",
+    "longMnemonic" : "TVOL01",
+    "shortMnemonic" : "TV01"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "tank02Volume",
+    "documentation" : "Tank 02 Volume",
+    "longMnemonic" : "TVOL02",
+    "shortMnemonic" : "TV02"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "tank03Volume",
+    "documentation" : "Tank 03 Volume",
+    "longMnemonic" : "TVOL03",
+    "shortMnemonic" : "TV03"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "tank04Volume",
+    "documentation" : "Tank 04 Volume",
+    "longMnemonic" : "TVOL04",
+    "shortMnemonic" : "TV04"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "tank05Volume",
+    "documentation" : "Tank 05 Volume",
+    "longMnemonic" : "TVOL05",
+    "shortMnemonic" : "TV05"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "tank06Volume",
+    "documentation" : "Tank 06 Volume",
+    "longMnemonic" : "TVOL06",
+    "shortMnemonic" : "TV06"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "tank07Volume",
+    "documentation" : "Tank 07 Volume",
+    "longMnemonic" : "TVOL07",
+    "shortMnemonic" : "TV07"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "tank08Volume",
+    "documentation" : "Tank 08 Volume",
+    "longMnemonic" : "TVOL08",
+    "shortMnemonic" : "TV08"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "tank09Volume",
+    "documentation" : "Tank 09 Volume",
+    "longMnemonic" : "TVOL09",
+    "shortMnemonic" : "TV09"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "tank10Volume",
+    "documentation" : "Tank 10 Volume",
+    "longMnemonic" : "TVOL10",
+    "shortMnemonic" : "TV10"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "tank11Volume",
+    "documentation" : "Tank 11 Volume",
+    "longMnemonic" : "TVOL11",
+    "shortMnemonic" : "TV11"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "tank12Volume",
+    "documentation" : "Tank 12 Volume",
+    "longMnemonic" : "TVOL12",
+    "shortMnemonic" : "TV12"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "tank13Volume",
+    "documentation" : "Tank 13 Volume",
+    "longMnemonic" : "TVOL13",
+    "shortMnemonic" : "TV13"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "tank14Volume",
+    "documentation" : "Tank 14 Volume",
+    "longMnemonic" : "TVOL14",
+    "shortMnemonic" : "TV14"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "tripTank1Volume",
+    "documentation" : "Trip Tank 1 Volume",
+    "longMnemonic" : "TTVOL1",
+    "shortMnemonic" : "TTV1"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "tripTank2Volume",
+    "documentation" : "Trip Tank 2 Volume",
+    "longMnemonic" : "TTVOL2",
+    "shortMnemonic" : "TTV2"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

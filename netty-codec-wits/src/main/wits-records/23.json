@@ -1,0 +1,265 @@
+{
+  "name" : "WellIdentificationRecord",
+  "documentation" : "Manually-entered data. Record is sent when new data values are available",
+  "recordId" : 23,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "STRING",
+    "name" : "wellName",
+    "documentation" : "Well Name",
+    "longMnemonic" : "WELLNAME",
+    "shortMnemonic" : "WELL"
+  }, {
+    "fieldId" : 9,
+    "type" : "STRING",
+    "name" : "wellIdentificationNumber",
+    "documentation" : "Well Identification Number",
+    "longMnemonic" : "WELLNUM",
+    "shortMnemonic" : "WNUM"
+  }, {
+    "fieldId" : 10,
+    "type" : "STRING",
+    "name" : "operator",
+    "documentation" : "Operator",
+    "longMnemonic" : "OPERATOR",
+    "shortMnemonic" : "OPER"
+  }, {
+    "fieldId" : 11,
+    "type" : "STRING",
+    "name" : "wellClassificationLahee",
+    "documentation" : "Well Classification (Lahee)",
+    "longMnemonic" : "WELLCLAS",
+    "shortMnemonic" : "WCLS"
+  }, {
+    "fieldId" : 12,
+    "type" : "STRING",
+    "name" : "wellLocation",
+    "documentation" : "Well Location",
+    "longMnemonic" : "LOCATION",
+    "shortMnemonic" : "WLOC"
+  }, {
+    "fieldId" : 13,
+    "type" : "STRING",
+    "name" : "wellUnivTranMercator",
+    "documentation" : "Well Univ.Tran.Mercator",
+    "longMnemonic" : "WELLUTM",
+    "shortMnemonic" : "WUTM"
+  }, {
+    "fieldId" : 14,
+    "type" : "STRING",
+    "name" : "wellSurfaceLatitude",
+    "documentation" : "Well Surface Latitude",
+    "longMnemonic" : "WELLLAT",
+    "shortMnemonic" : "WLAT"
+  }, {
+    "fieldId" : 15,
+    "type" : "STRING",
+    "name" : "wellSurfaceLongitude",
+    "documentation" : "Well Surface Longitude",
+    "longMnemonic" : "WELLLON",
+    "shortMnemonic" : "WLON"
+  }, {
+    "fieldId" : 16,
+    "type" : "STRING",
+    "name" : "fieldName",
+    "documentation" : "Field Name",
+    "longMnemonic" : "FIELD",
+    "shortMnemonic" : "FLD"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "elevDatumMsl",
+    "documentation" : "Elev : Datum-MSL",
+    "longMnemonic" : "ELEVDP",
+    "shortMnemonic" : "ELDP"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "elevKellyBushingMsl",
+    "documentation" : "Elev : Kelly Bushing-MSL",
+    "longMnemonic" : "ELEVKB",
+    "shortMnemonic" : "ELKB"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "elevGroundLevelMsl",
+    "documentation" : "Elev : Ground Level-MSL",
+    "longMnemonic" : "ELEVGL",
+    "shortMnemonic" : "ELGL"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "waterDepthMean",
+    "documentation" : "Water Depth (mean)",
+    "longMnemonic" : "WATDEPT",
+    "shortMnemonic" : "WDPM"
+  }, {
+    "fieldId" : 21,
+    "type" : "LONG",
+    "name" : "spudDate",
+    "documentation" : "Spud Date",
+    "longMnemonic" : "SPUDDATE",
+    "shortMnemonic" : "SPDT"
+  }, {
+    "fieldId" : 22,
+    "type" : "STRING",
+    "name" : "customField01Identifier",
+    "documentation" : "Custom Field 01 Identifier",
+    "longMnemonic" : "CUS1",
+    "shortMnemonic" : "CUS1"
+  }, {
+    "fieldId" : 23,
+    "type" : "STRING",
+    "name" : "customField02Identifier",
+    "documentation" : "Custom Field 02 Identifier",
+    "longMnemonic" : "CUS2",
+    "shortMnemonic" : "CUS2"
+  }, {
+    "fieldId" : 24,
+    "type" : "STRING",
+    "name" : "customField03Identifier",
+    "documentation" : "Custom Field 03 Identifier",
+    "longMnemonic" : "CUS3",
+    "shortMnemonic" : "CUS3"
+  }, {
+    "fieldId" : 25,
+    "type" : "STRING",
+    "name" : "customField04Identifier",
+    "documentation" : "Custom Field 04 Identifier",
+    "longMnemonic" : "CUS4",
+    "shortMnemonic" : "CUS4"
+  }, {
+    "fieldId" : 26,
+    "type" : "STRING",
+    "name" : "customField05Identifier",
+    "documentation" : "Custom Field 05 Identifier",
+    "longMnemonic" : "CUS5",
+    "shortMnemonic" : "CUS5"
+  }, {
+    "fieldId" : 27,
+    "type" : "STRING",
+    "name" : "customField06Identifier",
+    "documentation" : "Custom Field 06 Identifier",
+    "longMnemonic" : "CUS6",
+    "shortMnemonic" : "CUS6"
+  }, {
+    "fieldId" : 28,
+    "type" : "STRING",
+    "name" : "customField07Identifier",
+    "documentation" : "Custom Field 07 Identifier",
+    "longMnemonic" : "CUS7",
+    "shortMnemonic" : "CUS7"
+  }, {
+    "fieldId" : 29,
+    "type" : "STRING",
+    "name" : "customField08Identifier",
+    "documentation" : "Custom Field 08 Identifier",
+    "longMnemonic" : "CUS8",
+    "shortMnemonic" : "CUS8"
+  }, {
+    "fieldId" : 30,
+    "type" : "STRING",
+    "name" : "customField09Identifier",
+    "documentation" : "Custom Field 09 Identifier",
+    "longMnemonic" : "CUS9",
+    "shortMnemonic" : "CUS9"
+  }, {
+    "fieldId" : 31,
+    "type" : "STRING",
+    "name" : "customField10Identifier",
+    "documentation" : "Custom Field 10 Identifier",
+    "longMnemonic" : "CUS0",
+    "shortMnemonic" : "CUS0"
+  }, {
+    "fieldId" : 32,
+    "type" : "STRING",
+    "name" : "unitsTypeUsed",
+    "documentation" : "Units Type used",
+    "longMnemonic" : "UNIT",
+    "shortMnemonic" : "UNIT"
+  }, {
+    "fieldId" : 33,
+    "type" : "LONG",
+    "name" : "timeZoneOffset",
+    "documentation" : "Time Zone Offset",
+    "longMnemonic" : "TOFFSET",
+    "shortMnemonic" : "TOFF"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  } ]
+}

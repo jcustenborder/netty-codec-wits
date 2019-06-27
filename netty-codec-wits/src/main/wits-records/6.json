@@ -1,0 +1,244 @@
+{
+  "name" : "TrippingCasingConnectionBasedRecord",
+  "documentation" : "Data acquired in real-time and computed from first out of slips to next first out of slips. Only sent when tripping. Average and maximum values reset following the transmission of the record",
+  "recordId" : 6,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthBitMeas",
+    "documentation" : "Depth Bit (meas)",
+    "longMnemonic" : "DEPTBITM",
+    "shortMnemonic" : "DBTM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthBitVert",
+    "documentation" : "Depth Bit (vert)",
+    "longMnemonic" : "DEPTBITV",
+    "shortMnemonic" : "DBTV"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 12,
+    "type" : "SHORT",
+    "name" : "tripNumber",
+    "documentation" : "Trip Number",
+    "longMnemonic" : "TRIPNUM",
+    "shortMnemonic" : "TNUM"
+  }, {
+    "fieldId" : 13,
+    "type" : "SHORT",
+    "name" : "connectionsDone",
+    "documentation" : "Connections Done",
+    "longMnemonic" : "CONNDONE",
+    "shortMnemonic" : "CDON"
+  }, {
+    "fieldId" : 14,
+    "type" : "SHORT",
+    "name" : "connectionsRemaining",
+    "documentation" : "Connections Remaining",
+    "longMnemonic" : "CONNREM",
+    "shortMnemonic" : "CREM"
+  }, {
+    "fieldId" : 15,
+    "type" : "SHORT",
+    "name" : "elapsedTimeInSlips",
+    "documentation" : "Elapsed Time In-Slips",
+    "longMnemonic" : "ETIMESLP",
+    "shortMnemonic" : "ETSL"
+  }, {
+    "fieldId" : 16,
+    "type" : "SHORT",
+    "name" : "elapsedTimeOutOfSlips",
+    "documentation" : "Elapsed Time Out-of-Slips",
+    "longMnemonic" : "ETIMEOS",
+    "shortMnemonic" : "ETOS"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "runningSpeedUpMax",
+    "documentation" : "Running Speed -up (max)",
+    "longMnemonic" : "RSUX",
+    "shortMnemonic" : "RSUX"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "runningSpeedUpAvg",
+    "documentation" : "Running Speed -up (avg)",
+    "longMnemonic" : "RSUA",
+    "shortMnemonic" : "RSUA"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "runningSpeedDownMax",
+    "documentation" : "Running Speed -down (max)",
+    "longMnemonic" : "RSDX",
+    "shortMnemonic" : "RSDX"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "runningSpeedDownAvg",
+    "documentation" : "Running Speed -down (avg)",
+    "longMnemonic" : "RSDA",
+    "shortMnemonic" : "RSDA"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "hookloadMax",
+    "documentation" : "Hookload (max)",
+    "longMnemonic" : "HKLX",
+    "shortMnemonic" : "HKLX"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "hookloadMin",
+    "documentation" : "Hookload (min)",
+    "longMnemonic" : "HKLN",
+    "shortMnemonic" : "HKLN"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "hookloadAvg",
+    "documentation" : "Hookload (avg)",
+    "longMnemonic" : "HKLA",
+    "shortMnemonic" : "HKLA"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "torqueMakeUpMax",
+    "documentation" : "Torque - Make Up (max)",
+    "longMnemonic" : "TORQMUX",
+    "shortMnemonic" : "TQMX"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "torqueBreakoutMax",
+    "documentation" : "Torque - Breakout (max)",
+    "longMnemonic" : "TORQBOX",
+    "shortMnemonic" : "TQBX"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "fillGainVolumeObs",
+    "documentation" : "Fill/Gain Volume Obs.",
+    "longMnemonic" : "FVOLO",
+    "shortMnemonic" : "FVO"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "fillGainVolumeExp",
+    "documentation" : "Fill/Gain Volume Exp.",
+    "longMnemonic" : "FVOLE",
+    "shortMnemonic" : "FVE"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "fillGainVolumeObsCum",
+    "documentation" : "Fill/Gain Volume Obs.(cum)",
+    "longMnemonic" : "FVOLOC",
+    "shortMnemonic" : "FVOC"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "fillGainVolumeExpCum",
+    "documentation" : "Fill/Gain Volume Exp (cum)",
+    "longMnemonic" : "FVOLEC",
+    "shortMnemonic" : "FVEC"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

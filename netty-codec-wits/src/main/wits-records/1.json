@@ -1,0 +1,321 @@
+{
+  "name" : "GeneralTimeBasedRecord",
+  "documentation" : "Data acquired in real-time and computed over the trigger interval; record transmitted and computation reset when triggering interval occurs",
+  "recordId" : 1,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellIdentifier",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordIdentifier",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceIdentifier",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthBitMeas",
+    "documentation" : "Depth Bit (meas)",
+    "longMnemonic" : "DEPTBITM",
+    "shortMnemonic" : "DBTM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthBitVert",
+    "documentation" : "Depth Bit (vert)",
+    "longMnemonic" : "DEPTBITV",
+    "shortMnemonic" : "DBTV"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "blockPosition",
+    "documentation" : "Block Position",
+    "longMnemonic" : "BLKPOS",
+    "shortMnemonic" : "BPOS"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "rateOfPenetrationAvg",
+    "documentation" : "Rate of Penetration (avg)",
+    "longMnemonic" : "ROPA",
+    "shortMnemonic" : "ROPA"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "hookloadAvg",
+    "documentation" : "Hookload (avg)",
+    "longMnemonic" : "HKLA",
+    "shortMnemonic" : "HKLA"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "hookloadMax",
+    "documentation" : "Hookload (max)",
+    "longMnemonic" : "HKLX",
+    "shortMnemonic" : "HKLX"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "weightOnBitSurfAvg",
+    "documentation" : "Weight-on-Bit (surf,avg)",
+    "longMnemonic" : "WOBA",
+    "shortMnemonic" : "WOBA"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "weightOnBitSurfMax",
+    "documentation" : "Weight-on-Bit (surf,max)",
+    "longMnemonic" : "WOBX",
+    "shortMnemonic" : "WOBX"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "rotaryTorqueSurfAvg",
+    "documentation" : "Rotary Torque (surf,avg)",
+    "longMnemonic" : "TORQA",
+    "shortMnemonic" : "TQA"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "rotaryTorqueSurfMax",
+    "documentation" : "Rotary Torque (surf,max)",
+    "longMnemonic" : "TORQX",
+    "shortMnemonic" : "TQX"
+  }, {
+    "fieldId" : 20,
+    "type" : "SHORT",
+    "name" : "rotarySpeedSurfAvg",
+    "documentation" : "Rotary Speed (surf,avg)",
+    "longMnemonic" : "RPMA",
+    "shortMnemonic" : "RPMA"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "standpipePressureAvg",
+    "documentation" : "Standpipe Pressure (avg)",
+    "longMnemonic" : "SPPA",
+    "shortMnemonic" : "SPPA"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "casingChokePressure",
+    "documentation" : "Casing (Choke) Pressure",
+    "longMnemonic" : "CHKP",
+    "shortMnemonic" : "CHKP"
+  }, {
+    "fieldId" : 23,
+    "type" : "SHORT",
+    "name" : "pumpStrokeRate1",
+    "documentation" : "Pump Stroke Rate #1",
+    "longMnemonic" : "SPM1",
+    "shortMnemonic" : "SPM1"
+  }, {
+    "fieldId" : 24,
+    "type" : "SHORT",
+    "name" : "pumpStrokeRate2",
+    "documentation" : "Pump Stroke Rate #2",
+    "longMnemonic" : "SPM2",
+    "shortMnemonic" : "SPM2"
+  }, {
+    "fieldId" : 25,
+    "type" : "SHORT",
+    "name" : "pumpStrokeRate3",
+    "documentation" : "Pump Stroke Rate #3",
+    "longMnemonic" : "SPM3",
+    "shortMnemonic" : "SPM3"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "tankVolumeActive",
+    "documentation" : "Tank Volume (active)",
+    "longMnemonic" : "TVOLACT",
+    "shortMnemonic" : "TVA"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "tankVolumeChangeAct",
+    "documentation" : "Tank Volume Change (act)",
+    "longMnemonic" : "TVOLCACT",
+    "shortMnemonic" : "TVCA"
+  }, {
+    "fieldId" : 28,
+    "type" : "SHORT",
+    "name" : "mudFlowOut",
+    "documentation" : "Mud Flow Out %",
+    "longMnemonic" : "MFOP",
+    "shortMnemonic" : "MFOP"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "mudFlowOutAvg",
+    "documentation" : "Mud Flow Out (avg)",
+    "longMnemonic" : "MFOA",
+    "shortMnemonic" : "MFOA"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "mudFlowInAvg",
+    "documentation" : "Mud Flow In (avg)",
+    "longMnemonic" : "MFIA",
+    "shortMnemonic" : "MFIA"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "mudDensityOutAvg",
+    "documentation" : "Mud Density Out (avg)",
+    "longMnemonic" : "MDOA",
+    "shortMnemonic" : "MDOA"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "mudDensityInAvg",
+    "documentation" : "Mud Density In (avg)",
+    "longMnemonic" : "MDIA",
+    "shortMnemonic" : "MDIA"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "mudTemperatureOutAvg",
+    "documentation" : "Mud Temperature Out (avg)",
+    "longMnemonic" : "MTOA",
+    "shortMnemonic" : "MTOA"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "mudTemperatureInAvg",
+    "documentation" : "Mud Temperature In (avg)",
+    "longMnemonic" : "MTIA",
+    "shortMnemonic" : "MTIA"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "mudConductivityOutAvg",
+    "documentation" : "Mud Conductivity Out (avg)",
+    "longMnemonic" : "MCOA",
+    "shortMnemonic" : "MCOA"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "mudConductivityInAvg",
+    "documentation" : "Mud Conductivity In (avg)",
+    "longMnemonic" : "MCIA",
+    "shortMnemonic" : "MCIA"
+  }, {
+    "fieldId" : 37,
+    "type" : "LONG",
+    "name" : "pumpStrokeCountCum",
+    "documentation" : "Pump Stroke Count (cum)",
+    "longMnemonic" : "STKC",
+    "shortMnemonic" : "STKC"
+  }, {
+    "fieldId" : 38,
+    "type" : "SHORT",
+    "name" : "lagStrokes",
+    "documentation" : "Lag Strokes",
+    "longMnemonic" : "LAGSTKS",
+    "shortMnemonic" : "LSTK"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "depthReturnsMeas",
+    "documentation" : "Depth Returns (meas)",
+    "longMnemonic" : "DEPTRETM",
+    "shortMnemonic" : "DRTM"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "gasAvg",
+    "documentation" : "Gas (avg)",
+    "longMnemonic" : "GASA",
+    "shortMnemonic" : "GASA"
+  }, {
+    "fieldId" : 41,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}
