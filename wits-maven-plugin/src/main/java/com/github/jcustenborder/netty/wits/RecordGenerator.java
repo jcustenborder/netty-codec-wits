@@ -15,12 +15,16 @@
  */
 package com.github.jcustenborder.netty.wits;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.github.jcustenborder.netty.wits.model.Record;
 import com.helger.jcodemodel.AbstractJClass;
 import com.helger.jcodemodel.AbstractJType;
 import com.helger.jcodemodel.EClassType;
+import com.helger.jcodemodel.IJExpression;
 import com.helger.jcodemodel.JCase;
 import com.helger.jcodemodel.JClassAlreadyExistsException;
 import com.helger.jcodemodel.JCodeModel;
@@ -41,13 +45,14 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 class RecordGenerator {
-  final String packageName;
+  final String packageName = "com.github.jcustenborder.netty.wits";
   final JCodeModel codeModel;
   final AbstractJClass stringType;
   final AbstractJClass recordReaderClass;
@@ -57,8 +62,7 @@ class RecordGenerator {
   final AbstractJClass loggerFactoryClass;
 
 
-  RecordGenerator(String packageName, JCodeModel codeModel) {
-    this.packageName = packageName;
+  RecordGenerator(JCodeModel codeModel) {
     this.codeModel = codeModel;
     this.stringType = this.codeModel.ref(String.class);
     this.recordReaderClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.RecordReader");
@@ -71,6 +75,11 @@ class RecordGenerator {
   private AbstractJClass recordBuilderClass;
   private AbstractJClass recordImmutableClass;
   private JDefinedClass recordInterface;
+
+  void addGenerated(JDefinedClass definedClass) {
+    AbstractJClass generatedAnnotation = this.codeModel.ref("javax.annotation.Generated");
+    definedClass.annotate(generatedAnnotation).param(this.getClass().getName());
+  }
 
   JFieldVar addLogger(JDefinedClass definedClass) {
     JFieldVar result = definedClass.field(
@@ -170,6 +179,7 @@ class RecordGenerator {
         this.packageName + "." + record.name(),
         EClassType.INTERFACE
     )._implements(this.recordBaseInterface);
+    addGenerated(this.recordInterface);
     this.recordImmutableClass = this.codeModel.ref(this.packageName + ".Immutable" + record.name());
     this.recordBuilderClass = this.codeModel.ref(this.packageName + ".Immutable" + record.name() + ".Builder");
 
@@ -183,13 +193,19 @@ class RecordGenerator {
     if (null != record.documentation()) {
       this.recordInterface.javadoc().add(record.documentation());
     }
+    List<IJExpression> expressions = new ArrayList<>();
 
-    for (Record.Field field : record.fields()) {
+    record.fields().stream().sorted(Comparator.comparingInt(Record.Field::fieldId)).forEach(field -> {
       AbstractJType fieldType = typeForField(field);
       JMethod method = this.recordInterface.method(JMod.NONE, fieldType, field.name());
       method.annotate(Nullable.class);
       method.javadoc().addReturn().add(field.documentation());
-    }
+      method.annotate(JsonProperty.class)
+          .param("value", field.name());
+      method.annotate(JsonPropertyDescription.class)
+          .param(field.documentation());
+      expressions.add(JExpr.lit(method.name()));
+    });
 
     if (record.fields().stream().anyMatch(f -> "date".equals(f.name())) &&
         record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
@@ -199,13 +215,14 @@ class RecordGenerator {
       JMethod method = this.recordInterface.method(JMod.DEFAULT, localDateTimeType, "dateTime");
       method.annotate(derived);
       method.annotate(Nullable.class);
-
       JInvocation invokeTime = JExpr._this().invoke("time");
       JInvocation invokeDate = JExpr._this().invoke("date");
-
       method.body()._return(utilsClass.staticInvoke("parse").arg(invokeDate).arg(invokeTime));
+      expressions.add(JExpr.lit(method.name()));
     }
 
+    this.recordInterface.annotate(JsonPropertyOrder.class)
+        .paramArray("value", expressions.toArray(new IJExpression[0]));
   }
 
   List<Record> records = new ArrayList<>();
@@ -224,6 +241,7 @@ class RecordGenerator {
         .narrow(integerClass, this.recordReaderClass);
     JDefinedClass readerFunctionClass = this.codeModel._class(JMod.NONE, "com.github.jcustenborder.netty.wits.RecordReaderFunction")
         ._implements(functionClass);
+    addGenerated(readerFunctionClass);
     JFieldVar logVar = addLogger(readerFunctionClass);
     JMethod methodApply = readerFunctionClass.method(JMod.PUBLIC, this.recordReaderClass, "apply");
     methodApply.annotate(Override.class);
@@ -274,6 +292,7 @@ class RecordGenerator {
         JMod.PUBLIC,
         "com.github.jcustenborder.netty.wits.RecordWriterFactory"
     );
+    addGenerated(writerFactoryClass);
     JFieldVar logVar = addLogger(writerFactoryClass);
     AbstractJClass mapClass = this.codeModel.ref(Map.class);
     AbstractJClass classOfRecord = this.codeModel.ref(Class.class).narrow(this.recordBaseInterface.wildcardExtends());
@@ -317,6 +336,7 @@ class RecordGenerator {
         JMod.PUBLIC,
         "com.github.jcustenborder.netty.wits.RecordReaderFactory"
     );
+    addGenerated(readerFactoryClass);
     JFieldVar logVar = addLogger(readerFactoryClass);
     AbstractJClass mapClass = this.codeModel.ref(Map.class);
     AbstractJClass narrowedClass = mapClass.narrow(
@@ -384,6 +404,7 @@ class RecordGenerator {
         JMod.NONE,
         this.packageName + "." + record.name() + "Writer"
     )._extends(this.recordWriterClass.narrow(this.recordInterface));
+    addGenerated(writerClass);
     JMethod methodRecordNumber = writerClass.method(JMod.PROTECTED, this.codeModel.SHORT, "recordNumber");
     methodRecordNumber.annotate(Override.class);
     methodRecordNumber.body()._return(JExpr.lit(record.recordId()));
@@ -414,6 +435,7 @@ class RecordGenerator {
         JMod.NONE,
         this.packageName + "." + record.name() + "Reader"
     )._extends(this.recordReaderClass);
+    addGenerated(readerClass);
     JFieldVar logVar = addLogger(readerClass);
     JMethod methodRecordId = readerClass.method(JMod.PUBLIC, this.codeModel.SHORT, "recordId");
     methodRecordId.annotate(Override.class);

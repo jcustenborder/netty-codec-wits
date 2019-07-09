@@ -39,7 +39,7 @@ import java.util.stream.Collectors;
 @Mojo(name = "generate-wits-models", requiresDirectInvocation = true, requiresOnline = false)
 public class WITSModelGeneratorPlugin extends AbstractMojo {
 
-  @Parameter(property = "outputPath", defaultValue = "${project.build.directory}/generated-sources/connect-config-classes")
+  @Parameter(property = "outputPath", defaultValue = "${project.build.directory}/generated-sources/wits-model-classes")
   private File outputPath;
 
   @Parameter(defaultValue = "${project}", readonly = true, required = true)
@@ -106,7 +106,7 @@ public class WITSModelGeneratorPlugin extends AbstractMojo {
     );
 
     JCodeModel codeModel = new JCodeModel();
-    RecordGenerator generator = new RecordGenerator("com.github.jcustenborder.netty.wits", codeModel);
+    RecordGenerator generator = new RecordGenerator(codeModel);
     generator.addRecords(records);
 
     try {
