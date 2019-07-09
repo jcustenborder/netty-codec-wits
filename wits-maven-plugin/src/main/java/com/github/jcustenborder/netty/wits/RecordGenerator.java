@@ -221,8 +221,7 @@ class RecordGenerator {
       method.annotate(Nullable.class);
       method.javadoc().addReturn().add(field.documentation());
       method.annotate(JsonProperty.class)
-          .param("value", field.name())
-          .param("index", field.fieldId());
+          .param("value", field.name());
       method.annotate(JsonPropertyDescription.class)
           .param(field.documentation());
       expressions.add(JExpr.lit(method.name()));
@@ -232,7 +231,6 @@ class RecordGenerator {
         record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
       AbstractJClass localDateTimeType = this.codeModel.ref(LocalDateTime.class);
       AbstractJClass derived = this.codeModel.ref("org.immutables.value.Value.Derived");
-      AbstractJClass utilsClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.Utils");
       JMethod method = this.recordInterface.method(JMod.DEFAULT, localDateTimeType, "dateTime");
       method.annotate(derived);
       method.annotate(Nullable.class);
