@@ -15,23 +15,9 @@
  */
 package com.github.jcustenborder.netty.wits;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-class Utils {
-  private static final Logger log = LoggerFactory.getLogger(Utils.class);
-  static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyMMdd HHmmss");
-
-  public static LocalDateTime parse(Integer date, Integer time) {
-    log.trace("parse() - date = '{}' time = '{}'", date, time);
-    if (null == date || null == time) {
-      return null;
-    }
-    String datetime = date + " " + time;
-    return LocalDateTime.parse(datetime, DATE_TIME_FORMATTER);
-  }
-
+class Constants {
+  public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyMMdd");
+  public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HHmmss");
 }

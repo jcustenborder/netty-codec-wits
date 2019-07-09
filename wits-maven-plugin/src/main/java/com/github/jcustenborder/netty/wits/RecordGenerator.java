@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -42,7 +42,9 @@ import com.helger.jcodemodel.JVar;
 import javax.annotation.Nullable;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -97,23 +99,29 @@ class RecordGenerator {
   AbstractJType typeForField(Record.Field field) {
     AbstractJType result;
 
-    switch (field.type()) {
-      case STRING:
-        result = codeModel.ref(String.class);
-        break;
-      case LONG:
-        result = codeModel.ref(Integer.class);
-        break;
-      case FLOAT:
-        result = codeModel.ref(Float.class);
-        break;
-      case SHORT:
-        result = codeModel.ref(Short.class);
-        break;
-      default:
-        throw new UnsupportedOperationException(
-            String.format("%s(%s) is not supported", field.name(), field.type())
-        );
+    if (field.name().equals("date")) {
+      result = codeModel.ref(LocalDate.class);
+    } else if (field.name().equals("time")) {
+      result = codeModel.ref(LocalTime.class);
+    } else {
+      switch (field.type()) {
+        case STRING:
+          result = codeModel.ref(String.class);
+          break;
+        case LONG:
+          result = codeModel.ref(Integer.class);
+          break;
+        case FLOAT:
+          result = codeModel.ref(Float.class);
+          break;
+        case SHORT:
+          result = codeModel.ref(Short.class);
+          break;
+        default:
+          throw new UnsupportedOperationException(
+              String.format("%s(%s) is not supported", field.name(), field.type())
+          );
+      }
     }
 
 
@@ -123,23 +131,29 @@ class RecordGenerator {
   JInvocation readerMethodForField(Record.Field field) {
     JInvocation result;
 
-    switch (field.type()) {
-      case STRING:
-        result = JExpr._super().invoke("readString");
-        break;
-      case LONG:
-        result = JExpr._super().invoke("readLong");
-        break;
-      case FLOAT:
-        result = JExpr._super().invoke("readFloat");
-        break;
-      case SHORT:
-        result = JExpr._super().invoke("readShort");
-        break;
-      default:
-        throw new UnsupportedOperationException(
-            String.format("%s(%s) is not supported", field.name(), field.type())
-        );
+    if (field.name().equals("date")) {
+      result = JExpr._super().invoke("readDate");
+    } else if (field.name().equals("time")) {
+      result = JExpr._super().invoke("readTime");
+    } else {
+      switch (field.type()) {
+        case STRING:
+          result = JExpr._super().invoke("readString");
+          break;
+        case LONG:
+          result = JExpr._super().invoke("readLong");
+          break;
+        case FLOAT:
+          result = JExpr._super().invoke("readFloat");
+          break;
+        case SHORT:
+          result = JExpr._super().invoke("readShort");
+          break;
+        default:
+          throw new UnsupportedOperationException(
+              String.format("%s(%s) is not supported", field.name(), field.type())
+          );
+      }
     }
 
 
@@ -149,23 +163,29 @@ class RecordGenerator {
   JInvocation writerMethodForField(Record.Field field) {
     JInvocation result;
 
-    switch (field.type()) {
-      case STRING:
-        result = JExpr._super().invoke("writeString");
-        break;
-      case LONG:
-        result = JExpr._super().invoke("writeLong");
-        break;
-      case FLOAT:
-        result = JExpr._super().invoke("writeFloat");
-        break;
-      case SHORT:
-        result = JExpr._super().invoke("writeShort");
-        break;
-      default:
-        throw new UnsupportedOperationException(
-            String.format("%s(%s) is not supported", field.name(), field.type())
-        );
+    if (field.name().equals("date")) {
+      result = JExpr._super().invoke("writeDate");
+    } else if (field.name().equals("time")) {
+      result = JExpr._super().invoke("writeTime");
+    } else {
+      switch (field.type()) {
+        case STRING:
+          result = JExpr._super().invoke("writeString");
+          break;
+        case LONG:
+          result = JExpr._super().invoke("writeLong");
+          break;
+        case FLOAT:
+          result = JExpr._super().invoke("writeFloat");
+          break;
+        case SHORT:
+          result = JExpr._super().invoke("writeShort");
+          break;
+        default:
+          throw new UnsupportedOperationException(
+              String.format("%s(%s) is not supported", field.name(), field.type())
+          );
+      }
     }
 
 
@@ -201,7 +221,8 @@ class RecordGenerator {
       method.annotate(Nullable.class);
       method.javadoc().addReturn().add(field.documentation());
       method.annotate(JsonProperty.class)
-          .param("value", field.name());
+          .param("value", field.name())
+          .param("index", field.fieldId());
       method.annotate(JsonPropertyDescription.class)
           .param(field.documentation());
       expressions.add(JExpr.lit(method.name()));
@@ -217,8 +238,17 @@ class RecordGenerator {
       method.annotate(Nullable.class);
       JInvocation invokeTime = JExpr._this().invoke("time");
       JInvocation invokeDate = JExpr._this().invoke("date");
-      method.body()._return(utilsClass.staticInvoke("parse").arg(invokeDate).arg(invokeTime));
+      method.body()._if(invokeDate.eqNull())._then()._return(JExpr._null());
+      method.body()._if(invokeTime.eqNull())._then()._return(JExpr._null());
+
+      method.body()._return(localDateTimeType.staticInvoke("of").arg(invokeDate).arg(invokeTime));
       expressions.add(JExpr.lit(method.name()));
+      method.annotate(JsonProperty.class)
+          .param("value", method.name());
+      final String doc = "DateTime the event occurred.";
+      method.javadoc().addReturn().add(doc);
+      method.annotate(JsonPropertyDescription.class)
+          .param(doc);
     }
 
     this.recordInterface.annotate(JsonPropertyOrder.class)
@@ -477,6 +507,7 @@ class RecordGenerator {
       JInvocation readMethod = readerMethodForField(field);
       readMethod.arg(lineVar);
       JVar fieldVar = caseField.body().decl(JMod.FINAL, fieldType, field.name());
+
       fieldVar.init(readMethod);
       caseField.body().add(
           JExpr.invoke(logVar, "trace")

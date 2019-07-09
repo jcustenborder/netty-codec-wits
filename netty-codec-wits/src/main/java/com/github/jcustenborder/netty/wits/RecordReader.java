@@ -18,6 +18,9 @@ package com.github.jcustenborder.netty.wits;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 abstract class RecordReader {
   private static final Logger log = LoggerFactory.getLogger(RecordReader.class);
 
@@ -49,5 +52,15 @@ abstract class RecordReader {
   protected Integer readLong(String line) {
     String value = readString(line);
     return Integer.parseInt(value);
+  }
+
+  protected LocalDate readDate(String line) {
+    String value = readString(line);
+    return LocalDate.parse(value, Constants.DATE_FORMATTER);
+  }
+
+  protected LocalTime readTime(String line) {
+    String value = readString(line);
+    return LocalTime.parse(value, Constants.TIME_FORMATTER);
   }
 }
