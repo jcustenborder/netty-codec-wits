@@ -87,7 +87,7 @@ public class WITSModelGeneratorPlugin extends AbstractMojo {
 
     String[] fileNames = fileSetManager.getIncludedFiles(fileSet);
     List<Record> records = Arrays.stream(fileNames)
-        .map(s-> new File(project.getBasedir(), s))
+        .map(s -> new File(project.getBasedir(), s))
         .map(this::loadRecord)
         .filter(Objects::nonNull)
         .collect(Collectors.toList());
@@ -107,12 +107,12 @@ public class WITSModelGeneratorPlugin extends AbstractMojo {
 
     JCodeModel codeModel = new JCodeModel();
     RecordGenerator generator = new RecordGenerator("com.github.jcustenborder.netty.wits", codeModel);
-    for (Record record : records) {
-      try {
-        generator.generate(record);
-      } catch (JClassAlreadyExistsException e) {
-        throw new MojoFailureException("Duplicate class defined", e);
-      }
+    generator.addRecords(records);
+
+    try {
+      generator.generate();
+    } catch (JClassAlreadyExistsException e) {
+      throw new MojoFailureException("Duplicate class defined", e);
     }
 
     try {

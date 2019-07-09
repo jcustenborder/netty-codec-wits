@@ -26,6 +26,14 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 public class WITSPacketDecoder extends ByteToMessageDecoder {
+  static final ByteBuf HEADER = Unpooled.wrappedBuffer(
+      ByteBufUtil.decodeHexDump("26260d0a")
+  );
+  static final int HEADER_SIZE = HEADER.capacity();
+  static final ByteBuf FOOTER = Unpooled.wrappedBuffer(
+      ByteBufUtil.decodeHexDump("21210d0a")
+  );
+  static final int FOOTER_SIZE = FOOTER.capacity();
   private static final Logger log = LoggerFactory.getLogger(WITSPacketDecoder.class);
 
   private static int indexOf(ByteBuf haystack, ByteBuf needle) {
@@ -51,17 +59,6 @@ public class WITSPacketDecoder extends ByteToMessageDecoder {
     }
     return -1;
   }
-
-  static final ByteBuf HEADER = Unpooled.wrappedBuffer(
-      ByteBufUtil.decodeHexDump("26260d0a")
-  );
-  static final int HEADER_SIZE = HEADER.capacity();
-
-  static final ByteBuf FOOTER = Unpooled.wrappedBuffer(
-      ByteBufUtil.decodeHexDump("21210d0a")
-  );
-
-  static final int FOOTER_SIZE = FOOTER.capacity();
 
   @Override
   protected void decode(ChannelHandlerContext ctx, ByteBuf input, List<Object> output) throws Exception {

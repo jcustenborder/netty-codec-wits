@@ -35,7 +35,7 @@
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jsr310</artifactId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
             <version>${jackson.version}</version>
             <scope>compile</scope>
         </dependency>
@@ -46,7 +46,12 @@
             <version>${netty.version}</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>test</scope>
+        </dependency>
 
 
     </dependencies>

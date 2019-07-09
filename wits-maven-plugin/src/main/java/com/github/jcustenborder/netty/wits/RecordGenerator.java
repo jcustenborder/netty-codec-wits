@@ -28,6 +28,7 @@ import com.helger.jcodemodel.JConditional;
 import com.helger.jcodemodel.JDefinedClass;
 import com.helger.jcodemodel.JExpr;
 import com.helger.jcodemodel.JFieldVar;
+import com.helger.jcodemodel.JForEach;
 import com.helger.jcodemodel.JInvocation;
 import com.helger.jcodemodel.JMethod;
 import com.helger.jcodemodel.JMod;
@@ -37,28 +38,52 @@ import com.helger.jcodemodel.JVar;
 import javax.annotation.Nullable;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 class RecordGenerator {
   final String packageName;
   final JCodeModel codeModel;
   final AbstractJClass stringType;
   final AbstractJClass recordReaderClass;
-  final AbstractJClass writerReaderClass;
+  final AbstractJClass recordWriterClass;
   final AbstractJClass recordBaseInterface;
+  final AbstractJClass loggerClass;
+  final AbstractJClass loggerFactoryClass;
+
 
   RecordGenerator(String packageName, JCodeModel codeModel) {
     this.packageName = packageName;
     this.codeModel = codeModel;
     this.stringType = this.codeModel.ref(String.class);
     this.recordReaderClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.RecordReader");
-    this.writerReaderClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.RecordWriter");
+    this.recordWriterClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.RecordWriter");
     this.recordBaseInterface = this.codeModel.ref("com.github.jcustenborder.netty.wits.Record");
+    this.loggerClass = this.codeModel.ref("org.slf4j.Logger");
+    this.loggerFactoryClass = this.codeModel.ref("org.slf4j.LoggerFactory");
   }
 
   private AbstractJClass recordBuilderClass;
   private AbstractJClass recordImmutableClass;
   private JDefinedClass recordInterface;
 
+  JFieldVar addLogger(JDefinedClass definedClass) {
+    JFieldVar result = definedClass.field(
+        JMod.PRIVATE | JMod.STATIC | JMod.FINAL,
+        this.loggerClass,
+        "log"
+    );
+    result.init(
+        this.loggerFactoryClass.staticInvoke("getLogger")
+            .arg(definedClass.dotclass())
+    );
+    return result;
+  }
 
   AbstractJType typeForField(Record.Field field) {
     AbstractJType result;
@@ -165,20 +190,200 @@ class RecordGenerator {
       method.annotate(Nullable.class);
       method.javadoc().addReturn().add(field.documentation());
     }
+
+    if (record.fields().stream().anyMatch(f -> "date".equals(f.name())) &&
+        record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
+      AbstractJClass localDateTimeType = this.codeModel.ref(LocalDateTime.class);
+      AbstractJClass derived = this.codeModel.ref("org.immutables.value.Value.Derived");
+      AbstractJClass utilsClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.Utils");
+      JMethod method = this.recordInterface.method(JMod.DEFAULT, localDateTimeType, "dateTime");
+      method.annotate(derived);
+      method.annotate(Nullable.class);
+
+      JInvocation invokeTime = JExpr._this().invoke("time");
+      JInvocation invokeDate = JExpr._this().invoke("date");
+
+      method.body()._return(utilsClass.staticInvoke("parse").arg(invokeDate).arg(invokeTime));
+    }
+
   }
 
+  List<Record> records = new ArrayList<>();
 
-  public void generate(Record record) throws JClassAlreadyExistsException {
-    addRecordClass(record);
-    addReaderClass(record);
-    addWriterClass(record);
+  public void addRecord(Record record) {
+    records.add(record);
+  }
+
+  public void addRecords(Collection<Record> records) {
+    this.records.addAll(records);
+  }
+
+  void addRecordReaderFactoryFunction() throws JClassAlreadyExistsException {
+    AbstractJClass integerClass = this.codeModel.ref(Integer.class);
+    AbstractJClass functionClass = this.codeModel.ref("java.util.function.Function")
+        .narrow(integerClass, this.recordReaderClass);
+    JDefinedClass readerFunctionClass = this.codeModel._class(JMod.NONE, "com.github.jcustenborder.netty.wits.RecordReaderFunction")
+        ._implements(functionClass);
+    JFieldVar logVar = addLogger(readerFunctionClass);
+    JMethod methodApply = readerFunctionClass.method(JMod.PUBLIC, this.recordReaderClass, "apply");
+    methodApply.annotate(Override.class);
+    JVar recordIdParm = methodApply.param(integerClass, "recordId");
+    methodApply.body().add(
+        JExpr.invoke(logVar, "trace")
+            .arg("apply() - Creating reader. RecordId = '{}'")
+            .arg(recordIdParm)
+    );
+    JVar result = methodApply.body().decl(JMod.FINAL, this.recordReaderClass, "result");
+
+    readerFunctionClass.field(JMod.STATIC | JMod.FINAL | JMod.PUBLIC, functionClass, "INSTANCE")
+        .init(JExpr._new(readerFunctionClass));
+
+    JSwitch switchRecordId = methodApply.body()._switch(recordIdParm);
+
+    for (Record record : this.records) {
+      AbstractJClass recordReaderClass = this.codeModel.ref(this.packageName + "." + record.name() + "Reader");
+      JCase readerCase = switchRecordId._case(JExpr.lit(record.recordId()));
+      readerCase.body().assign(result, JExpr._new(recordReaderClass));
+      readerCase.body()._break();
+    }
+
+    switchRecordId._default().body()._throw(
+        JExpr._new(
+            this.codeModel.ref(UnsupportedOperationException.class)
+        )
+    );
+
+    methodApply.body()._return(result);
+
+
+  }
+
+  public void generate() throws JClassAlreadyExistsException {
+    for (Record record : this.records) {
+      addRecordClass(record);
+      addReaderClass(record);
+      addWriterClass(record);
+    }
+    addRecordReaderFactoryFunction();
+    addRecordReaderFactory();
+    addRecordWriterFactory();
+  }
+
+  private void addRecordWriterFactory() throws JClassAlreadyExistsException {
+    JDefinedClass writerFactoryClass = this.codeModel._class(
+        JMod.PUBLIC,
+        "com.github.jcustenborder.netty.wits.RecordWriterFactory"
+    );
+    JFieldVar logVar = addLogger(writerFactoryClass);
+    AbstractJClass mapClass = this.codeModel.ref(Map.class);
+    AbstractJClass classOfRecord = this.codeModel.ref(Class.class).narrow(this.recordBaseInterface.wildcardExtends());
+
+    AbstractJClass narrowedClass = mapClass.narrow(
+        classOfRecord,
+        this.recordWriterClass
+    );
+    JFieldVar writerLookup = writerFactoryClass.field(
+        JMod.PRIVATE | JMod.FINAL,
+        narrowedClass,
+        "writerLookup"
+    );
+    JMethod constructor = writerFactoryClass.constructor(JMod.PUBLIC);
+    constructor.body().addSingleLineComment("This is a little lame but for now look for immutable classes and perform the lookup this way.");
+    JVar map = constructor.body().decl(JMod.NONE, narrowedClass, "map");
+    map.init(
+        JExpr._new(this.codeModel.ref(HashMap.class))
+    );
+    JVar recordWriterVar = constructor.body().decl(JMod.NONE, this.recordWriterClass, "recordWriter");
+
+    for (Record record : this.records) {
+      AbstractJClass immutableClass = this.codeModel.ref(this.packageName + ".Immutable" + record.name());
+      AbstractJClass recordClass = this.codeModel.ref(this.packageName + "." + record.name());
+      AbstractJClass recordWriterClass = this.codeModel.ref(this.packageName + "." + record.name() + "Writer");
+      constructor.body().assign(recordWriterVar, JExpr._new(recordWriterClass));
+      constructor.body().add(map.invoke("put").arg(immutableClass.dotclass()).arg(recordWriterVar));
+      constructor.body().add(map.invoke("put").arg(recordClass.dotclass()).arg(recordWriterVar));
+    }
+
+    constructor.body().assign(writerLookup, map);
+
+    JMethod getMethod = writerFactoryClass.method(JMod.PUBLIC, this.recordWriterClass, "get");
+    JVar recordClassVar = getMethod.param(classOfRecord, "recordClass");
+    getMethod.body().add(logVar.invoke("trace").arg("get() - recordClass = '{}'").arg(recordClassVar));
+    getMethod.body()._return(writerLookup.invoke("get").arg(recordClassVar));
+  }
+
+  private void addRecordReaderFactory() throws JClassAlreadyExistsException {
+    JDefinedClass readerFactoryClass = this.codeModel._class(
+        JMod.PUBLIC,
+        "com.github.jcustenborder.netty.wits.RecordReaderFactory"
+    );
+    JFieldVar logVar = addLogger(readerFactoryClass);
+    AbstractJClass mapClass = this.codeModel.ref(Map.class);
+    AbstractJClass narrowedClass = mapClass.narrow(
+        this.codeModel.ref(Integer.class),
+        this.recordReaderClass
+    );
+    JFieldVar readerLookup = readerFactoryClass.field(
+        JMod.PRIVATE | JMod.FINAL,
+        narrowedClass,
+        "readerLookup"
+    );
+    readerLookup.init(
+        JExpr._new(this.codeModel.ref(LinkedHashMap.class))
+    );
+
+    JMethod getMethod = readerFactoryClass.method(
+        JMod.PUBLIC,
+        this.recordReaderClass,
+        "get"
+    );
+    JVar recordId = getMethod.param(
+        this.codeModel.INT,
+        "recordId"
+    );
+    getMethod.body().add(
+        JExpr.invoke(logVar, "trace")
+            .arg("get() - recordId = {}")
+            .arg(recordId)
+    );
+    AbstractJClass readerFunctionClass = this.codeModel.ref("com.github.jcustenborder.netty.wits.RecordReaderFunction");
+    getMethod.body()._return(
+        readerLookup.invoke("computeIfAbsent")
+            .arg(recordId)
+            .arg(readerFunctionClass.staticRef("INSTANCE"))
+    );
+    AbstractJClass listClass = this.codeModel.ref(List.class);
+    AbstractJClass narrowedList = listClass.narrow(Object.class);
+
+    JMethod writeMethod = readerFactoryClass.method(
+        JMod.PUBLIC,
+        this.codeModel.VOID,
+        "write"
+    );
+    JVar list = writeMethod.param(narrowedList, "list");
+    JForEach forEachBuilder = writeMethod.body().forEach(
+        JMod.NONE,
+        this.recordReaderClass,
+        "reader",
+        readerLookup.invoke("values")
+
+    );
+    JVar record = forEachBuilder.body().decl(
+        this.recordBaseInterface,
+        "record",
+        forEachBuilder.var().invoke("build")
+    );
+    forEachBuilder.body().add(
+        list.invoke("add")
+            .arg(record)
+    );
   }
 
   private void addWriterClass(Record record) throws JClassAlreadyExistsException {
     JDefinedClass writerClass = this.codeModel._class(
         JMod.NONE,
         this.packageName + "." + record.name() + "Writer"
-    )._extends(this.writerReaderClass.narrow(this.recordInterface));
+    )._extends(this.recordWriterClass.narrow(this.recordInterface));
     JMethod methodRecordNumber = writerClass.method(JMod.PROTECTED, this.codeModel.SHORT, "recordNumber");
     methodRecordNumber.annotate(Override.class);
     methodRecordNumber.body()._return(JExpr.lit(record.recordId()));
@@ -209,7 +414,7 @@ class RecordGenerator {
         JMod.NONE,
         this.packageName + "." + record.name() + "Reader"
     )._extends(this.recordReaderClass);
-
+    JFieldVar logVar = addLogger(readerClass);
     JMethod methodRecordId = readerClass.method(JMod.PUBLIC, this.codeModel.SHORT, "recordId");
     methodRecordId.annotate(Override.class);
     methodRecordId.body()._return(JExpr.lit(record.recordId()));
@@ -220,12 +425,15 @@ class RecordGenerator {
         "builder",
         this.recordImmutableClass.staticInvoke("builder")
     );
-    JMethod buildMethod = readerClass.method(JMod.PUBLIC, this.recordInterface, "build");
+    JMethod buildMethod = readerClass.method(JMod.PUBLIC, this.recordBaseInterface, "build");
+    buildMethod.annotate(Override.class);
     buildMethod.body()._return(
         JExpr.invoke(builderField, "build")
     );
 
     JMethod applyMethod = readerClass.method(JMod.PUBLIC, this.codeModel.VOID, "apply");
+    applyMethod.annotate(Override.class);
+
     JVar lineVar = applyMethod.param(String.class, "line");
     JVar fieldNumber = applyMethod.body().decl(JMod.FINAL, this.codeModel.SHORT, "fieldNumber");
     fieldNumber.init(JExpr.invoke(JExpr._super(), "fieldNumber").arg(lineVar));
@@ -248,9 +456,12 @@ class RecordGenerator {
       readMethod.arg(lineVar);
       JVar fieldVar = caseField.body().decl(JMod.FINAL, fieldType, field.name());
       fieldVar.init(readMethod);
+      caseField.body().add(
+          JExpr.invoke(logVar, "trace")
+              .arg("apply() - " + field.name() + " = '{}'")
+              .arg(fieldVar)
+      );
       caseField.body().add(builderField.invoke(field.name()).arg(fieldVar));
-
-
       caseField.body()._break();
     }
 

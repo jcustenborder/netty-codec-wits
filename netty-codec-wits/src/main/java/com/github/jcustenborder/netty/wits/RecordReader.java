@@ -15,13 +15,20 @@
  */
 package com.github.jcustenborder.netty.wits;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 abstract class RecordReader {
+  private static final Logger log = LoggerFactory.getLogger(RecordReader.class);
 
   public abstract short recordId();
 
+  public abstract void apply(String line);
+
+  public abstract Record build();
 
   protected short fieldNumber(String line) {
-    String fieldNumber = line.substring(2, 2);
+    String fieldNumber = line.substring(2, 4);
     return Short.parseShort(fieldNumber);
   }
 
