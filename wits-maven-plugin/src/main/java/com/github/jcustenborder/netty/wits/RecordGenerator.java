@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.github.jcustenborder.netty.wits.model.Record;
+import com.google.inject.internal.util.ImmutableSet;
 import com.helger.jcodemodel.AbstractJClass;
 import com.helger.jcodemodel.AbstractJType;
 import com.helger.jcodemodel.EClassType;
@@ -52,6 +53,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 class RecordGenerator {
   final String packageName = "com.github.jcustenborder.netty.wits";
@@ -213,19 +215,31 @@ class RecordGenerator {
     if (null != record.documentation()) {
       this.recordInterface.javadoc().add(record.documentation());
     }
+    Set<String> inheritedFields = ImmutableSet.of(
+        "wellId",
+        "sidetrackHoleSectNo",
+        "recordId",
+        "sequenceId",
+        "date",
+        "time"
+    );
     List<IJExpression> expressions = new ArrayList<>();
+//    expressions.add(JExpr.lit("recordId"));
 
-    record.fields().stream().sorted(Comparator.comparingInt(Record.Field::fieldId)).forEach(field -> {
-      AbstractJType fieldType = typeForField(field);
-      JMethod method = this.recordInterface.method(JMod.NONE, fieldType, field.name());
-      method.annotate(Nullable.class);
-      method.javadoc().addReturn().add(field.documentation());
-      method.annotate(JsonProperty.class)
-          .param("value", field.name());
-      method.annotate(JsonPropertyDescription.class)
-          .param(field.documentation());
-      expressions.add(JExpr.lit(method.name()));
-    });
+    record.fields().stream()
+        .filter(field -> !inheritedFields.contains(field.name()))
+        .sorted(Comparator.comparingInt(Record.Field::fieldId))
+        .forEach(field -> {
+          AbstractJType fieldType = typeForField(field);
+          JMethod method = this.recordInterface.method(JMod.NONE, fieldType, field.name());
+          method.annotate(Nullable.class);
+          method.javadoc().addReturn().add(field.documentation());
+          method.annotate(JsonProperty.class)
+              .param("value", field.name());
+          method.annotate(JsonPropertyDescription.class)
+              .param(field.documentation());
+          expressions.add(JExpr.lit(method.name()));
+        });
 
     if (record.fields().stream().anyMatch(f -> "date".equals(f.name())) &&
         record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
@@ -478,7 +492,7 @@ class RecordGenerator {
     JMethod buildMethod = readerClass.method(JMod.PUBLIC, this.recordBaseInterface, "build");
     buildMethod.annotate(Override.class);
     buildMethod.body()._return(
-        JExpr.invoke(builderField, "build")
+        builderField.invoke("recordId").arg(JExpr.cast(this.codeModel.SHORT, JExpr.lit(record.recordId()))).invoke("build")
     );
 
     JMethod applyMethod = readerClass.method(JMod.PUBLIC, this.codeModel.VOID, "apply");

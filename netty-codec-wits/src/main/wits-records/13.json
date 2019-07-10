@@ -5,7 +5,7 @@
   "fields" : [ {
     "fieldId" : 1,
     "type" : "STRING",
-    "name" : "wellIdentifier",
+    "name" : "wellId",
     "documentation" : "Well Identifier",
     "longMnemonic" : "WELLID",
     "shortMnemonic" : "WID"
@@ -19,14 +19,14 @@
   }, {
     "fieldId" : 3,
     "type" : "SHORT",
-    "name" : "recordIdentifier",
+    "name" : "recordId",
     "documentation" : "Record Identifier",
     "longMnemonic" : "RECID",
     "shortMnemonic" : "RID"
   }, {
     "fieldId" : 4,
     "type" : "LONG",
-    "name" : "sequenceIdentifier",
+    "name" : "sequenceId",
     "documentation" : "Sequence Identifier",
     "longMnemonic" : "SEQID",
     "shortMnemonic" : "SQID"
