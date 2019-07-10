@@ -32,6 +32,7 @@ import java.util.List;
 
 @ChannelHandler.Sharable
 public class WITSDecoder extends MessageToMessageDecoder<ByteBuf> {
+
   static final Charset ASCII = Charset.forName("ASCII");
   private static final Logger log = LoggerFactory.getLogger(WITSDecoder.class);
 

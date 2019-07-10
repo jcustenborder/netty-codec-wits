@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,6 +26,11 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 public class WITSPacketDecoder extends ByteToMessageDecoder {
+  public WITSPacketDecoder() {
+//    setSingleDecode(true);
+    setCumulator(ByteToMessageDecoder.COMPOSITE_CUMULATOR);
+  }
+
   static final ByteBuf HEADER = Unpooled.wrappedBuffer(
       ByteBufUtil.decodeHexDump("26260d0a")
   );
@@ -67,12 +72,15 @@ public class WITSPacketDecoder extends ByteToMessageDecoder {
 
     log.trace("decode() - start = {} end = {}", start, end);
     if (start > -1 && end > -1) {
-      int index = start + HEADER_SIZE;
-      int count = end - FOOTER_SIZE;
-      log.trace("decode() - index = {} count = {}", index, count);
+      input.skipBytes(HEADER_SIZE);
+      int count = (end - start) - HEADER_SIZE;
+      log.trace("decode() - count = {}", count);
       output.add(
-          input.slice(index, count)
+          input.readRetainedSlice(count)
       );
+      input.skipBytes(FOOTER_SIZE);
     }
+
+    log.trace("decode() - isReadable = {} readerIndex = {}", input.isReadable(), input.readerIndex());
   }
 }

@@ -15,5 +15,65 @@
  */
 package com.github.jcustenborder.netty.wits;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+
+import javax.annotation.Nullable;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public interface Record {
+  /**
+   * @return
+   *     Well Identifier
+   */
+  @Nullable
+  @JsonProperty("wellId")
+  @JsonPropertyDescription("Well Identifier")
+  String wellId();
+
+  /**
+   * @return
+   *     Sidetrack/Hole Sect No.
+   */
+  @Nullable
+  @JsonProperty("sidetrackHoleSectNo")
+  @JsonPropertyDescription("Sidetrack/Hole Sect No.")
+  Short sidetrackHoleSectNo();
+
+  /**
+   * @return
+   *     Record Identifier
+   */
+  @Nullable
+  @JsonProperty("recordId")
+  @JsonPropertyDescription("Record Identifier")
+  Short recordId();
+
+  /**
+   * @return
+   *     Sequence Identifier
+   */
+  @Nullable
+  @JsonProperty("sequenceId")
+  @JsonPropertyDescription("Sequence Identifier")
+  Integer sequenceId();
+
+  /**
+   * @return
+   *     Date
+   */
+  @Nullable
+  @JsonProperty("date")
+  @JsonPropertyDescription("Date")
+  LocalDate date();
+
+  /**
+   * @return
+   *     Time
+   */
+  @Nullable
+  @JsonProperty("time")
+  @JsonPropertyDescription("Time")
+  LocalTime time();
 }
