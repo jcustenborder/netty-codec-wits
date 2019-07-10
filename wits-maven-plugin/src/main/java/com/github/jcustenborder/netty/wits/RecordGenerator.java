@@ -21,7 +21,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.github.jcustenborder.netty.wits.model.Record;
-import com.google.inject.internal.util.ImmutableSet;
 import com.helger.jcodemodel.AbstractJClass;
 import com.helger.jcodemodel.AbstractJType;
 import com.helger.jcodemodel.EClassType;
@@ -47,13 +46,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 class RecordGenerator {
   final String packageName = "com.github.jcustenborder.netty.wits";
@@ -215,7 +214,7 @@ class RecordGenerator {
     if (null != record.documentation()) {
       this.recordInterface.javadoc().add(record.documentation());
     }
-    Set<String> inheritedFields = ImmutableSet.of(
+    List<String> inheritedFields = Arrays.asList(
         "wellId",
         "sidetrackHoleSectNo",
         "recordId",
@@ -224,7 +223,7 @@ class RecordGenerator {
         "time"
     );
     List<IJExpression> expressions = new ArrayList<>();
-//    expressions.add(JExpr.lit("recordId"));
+    inheritedFields.stream().map(JExpr::lit).forEach(expressions::add);
 
     record.fields().stream()
         .filter(field -> !inheritedFields.contains(field.name()))
