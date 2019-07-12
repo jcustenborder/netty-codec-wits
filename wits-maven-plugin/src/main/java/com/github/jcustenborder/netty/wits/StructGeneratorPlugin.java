@@ -39,7 +39,7 @@ import java.util.stream.Collectors;
 @Mojo(name = "generate-struct-mappers", requiresDirectInvocation = true, requiresOnline = false)
 public class StructGeneratorPlugin extends AbstractMojo {
 
-  @Parameter(property = "outputPath", defaultValue = "${project.build.directory}/struct-code-generator")
+  @Parameter(property = "outputPath", defaultValue = "${project.build.directory}/generated-sources/struct-code-generator")
   private File outputPath;
 
   @Parameter(defaultValue = "${project}", readonly = true, required = true)
@@ -121,6 +121,6 @@ public class StructGeneratorPlugin extends AbstractMojo {
       throw new MojoFailureException("Exception thrown", e);
     }
 
-//    this.project.addCompileSourceRoot(this.outputPath.getAbsolutePath());
+    this.project.addCompileSourceRoot(this.outputPath.getAbsolutePath());
   }
 }

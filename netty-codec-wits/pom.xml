@@ -75,24 +75,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.github.jcustenborder.maven.plugins</groupId>
-                <artifactId>wits-maven-plugin</artifactId>
-                <version>${project.version}</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>generate-struct-mappers</goal>
-                        </goals>
-                        <configuration>
-                            <includeFiles>
-                                <includeFile>src/main/wits-records/*.json</includeFile>
-                            </includeFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+
         </plugins>
     </build>
 

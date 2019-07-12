@@ -43,7 +43,6 @@ import javax.annotation.Nullable;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -240,27 +239,27 @@ class RecordGenerator {
           expressions.add(JExpr.lit(method.name()));
         });
 
-    if (record.fields().stream().anyMatch(f -> "date".equals(f.name())) &&
-        record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
-      AbstractJClass localDateTimeType = this.codeModel.ref(LocalDateTime.class);
-      AbstractJClass derived = this.codeModel.ref("org.immutables.value.Value.Derived");
-      JMethod method = this.recordInterface.method(JMod.DEFAULT, localDateTimeType, "dateTime");
-      method.annotate(derived);
-      method.annotate(Nullable.class);
-      JInvocation invokeTime = JExpr._this().invoke("time");
-      JInvocation invokeDate = JExpr._this().invoke("date");
-      method.body()._if(invokeDate.eqNull())._then()._return(JExpr._null());
-      method.body()._if(invokeTime.eqNull())._then()._return(JExpr._null());
-
-      method.body()._return(localDateTimeType.staticInvoke("of").arg(invokeDate).arg(invokeTime));
-      expressions.add(JExpr.lit(method.name()));
-      method.annotate(JsonProperty.class)
-          .param("value", method.name());
-      final String doc = "DateTime the event occurred.";
-      method.javadoc().addReturn().add(doc);
-      method.annotate(JsonPropertyDescription.class)
-          .param(doc);
-    }
+//    if (record.fields().stream().anyMatch(f -> "date".equals(f.name())) &&
+//        record.fields().stream().anyMatch(f -> "time".equals(f.name()))) {
+//      AbstractJClass localDateTimeType = this.codeModel.ref(LocalDateTime.class);
+//      AbstractJClass derived = this.codeModel.ref("org.immutables.value.Value.Derived");
+//      JMethod method = this.recordInterface.method(JMod.DEFAULT, localDateTimeType, "dateTime");
+//      method.annotate(derived);
+//      method.annotate(Nullable.class);
+//      JInvocation invokeTime = JExpr._this().invoke("time");
+//      JInvocation invokeDate = JExpr._this().invoke("date");
+//      method.body()._if(invokeDate.eqNull())._then()._return(JExpr._null());
+//      method.body()._if(invokeTime.eqNull())._then()._return(JExpr._null());
+//
+//      method.body()._return(localDateTimeType.staticInvoke("of").arg(invokeDate).arg(invokeTime));
+//      expressions.add(JExpr.lit(method.name()));
+//      method.annotate(JsonProperty.class)
+//          .param("value", method.name());
+//      final String doc = "DateTime the event occurred.";
+//      method.javadoc().addReturn().add(doc);
+//      method.annotate(JsonPropertyDescription.class)
+//          .param(doc);
+//    }
 
     this.recordInterface.annotate(JsonPropertyOrder.class)
         .paramArray("value", expressions.toArray(new IJExpression[0]));

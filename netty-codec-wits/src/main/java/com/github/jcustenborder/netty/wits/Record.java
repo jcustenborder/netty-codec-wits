@@ -17,9 +17,11 @@ package com.github.jcustenborder.netty.wits;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
+import org.immutables.value.Value;
 
 import javax.annotation.Nullable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public interface Record {
@@ -76,4 +78,22 @@ public interface Record {
   @JsonProperty("time")
   @JsonPropertyDescription("Time")
   LocalTime time();
+
+  /**
+   * @return
+   *     DateTime the event occurred.
+   */
+  @Value.Derived
+  @Nullable
+  @JsonProperty("dateTime")
+  @JsonPropertyDescription("DateTime the event occurred.")
+  default LocalDateTime dateTime() {
+    if (this.date() == null) {
+      return null;
+    }
+    if (this.time() == null) {
+      return null;
+    }
+    return LocalDateTime.of(this.date(), this.time());
+  }
 }
