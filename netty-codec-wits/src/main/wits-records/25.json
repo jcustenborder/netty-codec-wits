@@ -1,0 +1,370 @@
+{
+  "name" : "WeatherSeaStateRecord",
+  "documentation" : "Acquired sensor data (possibly via WITS Level 0 transfer), or manually-entered data. The record is transmitted and any automatic computations are reset at the end of the triggering interval",
+  "recordId" : 25,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "waterDepthMean",
+    "documentation" : "Water Depth (mean)",
+    "longMnemonic" : "WATDEPT",
+    "shortMnemonic" : "WDPM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "airTemperature",
+    "documentation" : "Air Temperature",
+    "longMnemonic" : "AIRTEMP",
+    "shortMnemonic" : "AIRT"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "barometricPressure",
+    "documentation" : "Barometric Pressure",
+    "longMnemonic" : "BARPRES",
+    "shortMnemonic" : "BARP"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "wavesSignificantHeight",
+    "documentation" : "Waves, Significant Height",
+    "longMnemonic" : "WVSHGHT",
+    "shortMnemonic" : "WVSH"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "wavesMaximumHeight",
+    "documentation" : "Waves, Maximum Height",
+    "longMnemonic" : "WVMHGHT",
+    "shortMnemonic" : "WVMH"
+  }, {
+    "fieldId" : 13,
+    "type" : "SHORT",
+    "name" : "wavesMeanPeriod",
+    "documentation" : "Waves, Mean Period",
+    "longMnemonic" : "WVMPER",
+    "shortMnemonic" : "WVMP"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "wavesDirection",
+    "documentation" : "Waves, Direction",
+    "longMnemonic" : "WVDIR",
+    "shortMnemonic" : "WVDI"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "swellSignificantHeight",
+    "documentation" : "Swell, Significant Height",
+    "longMnemonic" : "SWSHGHT",
+    "shortMnemonic" : "SWSH"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "swellMaximumHeight",
+    "documentation" : "Swell, Maximum Height",
+    "longMnemonic" : "SWMHGHT",
+    "shortMnemonic" : "SWMH"
+  }, {
+    "fieldId" : 17,
+    "type" : "SHORT",
+    "name" : "swellMeanPeriod",
+    "documentation" : "Swell, Mean Period",
+    "longMnemonic" : "SWMPER",
+    "shortMnemonic" : "SWMP"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "swellDirection",
+    "documentation" : "Swell, Direction",
+    "longMnemonic" : "SWDIR",
+    "shortMnemonic" : "SWDI"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "windSpeed1Min",
+    "documentation" : "Wind Speed ( 1 min )",
+    "longMnemonic" : "WINDSPD",
+    "shortMnemonic" : "WSPD"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "windGusts5Sec",
+    "documentation" : "Wind Gusts ( 5 sec )",
+    "longMnemonic" : "WINDGUST",
+    "shortMnemonic" : "WGST"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "windDirection",
+    "documentation" : "Wind Direction",
+    "longMnemonic" : "WINDDIR",
+    "shortMnemonic" : "WDIR"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "anemometerHeight",
+    "documentation" : "Anemometer Height",
+    "longMnemonic" : "ANEMHGHT",
+    "shortMnemonic" : "ANEM"
+  }, {
+    "fieldId" : 23,
+    "type" : "SHORT",
+    "name" : "currentSpeed",
+    "documentation" : "Current Speed",
+    "longMnemonic" : "CURRSPD",
+    "shortMnemonic" : "CSPD"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "currentDirection",
+    "documentation" : "Current Direction",
+    "longMnemonic" : "CURRDIR",
+    "shortMnemonic" : "CDIR"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "depthCurrentMeasured",
+    "documentation" : "Depth current measured",
+    "longMnemonic" : "DEPTCURR",
+    "shortMnemonic" : "DCUR"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "vesselMeanDraft",
+    "documentation" : "Vessel Mean Draft",
+    "longMnemonic" : "VESMDRFT",
+    "shortMnemonic" : "VMD"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "heavePeakToPeakSig",
+    "documentation" : "Heave, Peak-to-Peak (sig)",
+    "longMnemonic" : "HEAVSIG",
+    "shortMnemonic" : "HVSG"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "heavePeakToPeakMax",
+    "documentation" : "Heave, Peak-to-Peak (max)",
+    "longMnemonic" : "HEAVMAX",
+    "shortMnemonic" : "HVMX"
+  }, {
+    "fieldId" : 29,
+    "type" : "SHORT",
+    "name" : "heaveMeanPeriod",
+    "documentation" : "Heave, Mean Period",
+    "longMnemonic" : "HEAVMPER",
+    "shortMnemonic" : "HVMP"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "rollPeakToPeakSig",
+    "documentation" : "Roll, Peak-to-Peak (sig)",
+    "longMnemonic" : "ROLLSIG",
+    "shortMnemonic" : "RLSG"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "rollPeakToPeakMax",
+    "documentation" : "Roll, Peak-to-Peak (max)",
+    "longMnemonic" : "ROLLMAX",
+    "shortMnemonic" : "RLMX"
+  }, {
+    "fieldId" : 32,
+    "type" : "SHORT",
+    "name" : "rollMeanPeriod",
+    "documentation" : "Roll, Mean Period",
+    "longMnemonic" : "ROLLMPER",
+    "shortMnemonic" : "RLMP"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "pitchPeakToPeakSig",
+    "documentation" : "Pitch, Peak-to-Peak (sig)",
+    "longMnemonic" : "PTCHSIG",
+    "shortMnemonic" : "PTSG"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "pitchPeakToPeakMax",
+    "documentation" : "Pitch, Peak-to-Peak (max)",
+    "longMnemonic" : "PTCHMAX",
+    "shortMnemonic" : "PTMX"
+  }, {
+    "fieldId" : 35,
+    "type" : "SHORT",
+    "name" : "pitchMeanPeriod",
+    "documentation" : "Pitch, Mean Period",
+    "longMnemonic" : "PTCHMPER",
+    "shortMnemonic" : "PTMP"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "yawPeakToPeakSig",
+    "documentation" : "Yaw, Peak-to Peak (sig)",
+    "longMnemonic" : "YAWSIG",
+    "shortMnemonic" : "YWSG"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "yawPeakToPeakMax",
+    "documentation" : "Yaw, Peak-to-Peak (max)",
+    "longMnemonic" : "YAWMAX",
+    "shortMnemonic" : "YWMX"
+  }, {
+    "fieldId" : 38,
+    "type" : "SHORT",
+    "name" : "yawMeanPeriod",
+    "documentation" : "Yaw, Mean Period",
+    "longMnemonic" : "YAWMPER",
+    "shortMnemonic" : "YWMP"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "surgePeakToPeakSig",
+    "documentation" : "Surge, Peak-to-Peak (sig)",
+    "longMnemonic" : "SURGSIG",
+    "shortMnemonic" : "SUSG"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "surgePeakToPeakMax",
+    "documentation" : "Surge, Peak-to-Peak (max)",
+    "longMnemonic" : "SURGMAX",
+    "shortMnemonic" : "SUMX"
+  }, {
+    "fieldId" : 41,
+    "type" : "SHORT",
+    "name" : "surgeMeanPeriod",
+    "documentation" : "Surge, Mean Period",
+    "longMnemonic" : "SURGMPER",
+    "shortMnemonic" : "SUMP"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "swayPeakToPeakSig",
+    "documentation" : "Sway, Peak-to-Peak (sig)",
+    "longMnemonic" : "SWAYSIG",
+    "shortMnemonic" : "SYSG"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "swayPeakToPeakMax",
+    "documentation" : "Sway, Peak-to-Peak (max)",
+    "longMnemonic" : "SWAYMAX",
+    "shortMnemonic" : "SYMX"
+  }, {
+    "fieldId" : 44,
+    "type" : "SHORT",
+    "name" : "swayMeanPeriod",
+    "documentation" : "Sway, Mean Period",
+    "longMnemonic" : "SWAYMPER",
+    "shortMnemonic" : "SYMP"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "trim",
+    "documentation" : "Trim",
+    "longMnemonic" : "TRIM",
+    "shortMnemonic" : "TRIM"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "heel",
+    "documentation" : "Heel",
+    "longMnemonic" : "HEEL",
+    "shortMnemonic" : "HEEL"
+  }, {
+    "fieldId" : 47,
+    "type" : "STRING",
+    "name" : "weatherComments",
+    "documentation" : "Weather Comments",
+    "longMnemonic" : "WSSCOMM",
+    "shortMnemonic" : "WSCM"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 49,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 50,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

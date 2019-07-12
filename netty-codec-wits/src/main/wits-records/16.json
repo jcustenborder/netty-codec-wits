@@ -1,0 +1,328 @@
+{
+  "name" : "HydrocarbonShowRecord",
+  "documentation" : "Manually-entered data when a hydrocarbon show is detected. Sent when new data values are available.",
+  "recordId" : 16,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "SHORT",
+    "name" : "showNumber",
+    "documentation" : "Show Number",
+    "longMnemonic" : "SHOWNUM",
+    "shortMnemonic" : "SWNO"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "showIntvlTopDepthMeas",
+    "documentation" : "Show Intvl Top Depth (meas)",
+    "longMnemonic" : "DEPTSITM",
+    "shortMnemonic" : "DSTM"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "showIntvlTopDepthVert",
+    "documentation" : "Show Intvl Top Depth (vert)",
+    "longMnemonic" : "DEPTSITV",
+    "shortMnemonic" : "DSTV"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "showIntvlBottDepthMeas",
+    "documentation" : "Show Intvl Bott Depth(meas)",
+    "longMnemonic" : "DEPTSIBM",
+    "shortMnemonic" : "DSBM"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "showIntvlBottDepthVert",
+    "documentation" : "Show Intvl Bott Depth(vert)",
+    "longMnemonic" : "DEPTSIBV",
+    "shortMnemonic" : "DSBV"
+  }, {
+    "fieldId" : 13,
+    "type" : "STRING",
+    "name" : "showLithType",
+    "documentation" : "Show Lith type",
+    "longMnemonic" : "SHLTYPE",
+    "shortMnemonic" : "WLTY"
+  }, {
+    "fieldId" : 14,
+    "type" : "STRING",
+    "name" : "showLithClassification",
+    "documentation" : "Show Lith classification",
+    "longMnemonic" : "SHLCLASS",
+    "shortMnemonic" : "WLCL"
+  }, {
+    "fieldId" : 15,
+    "type" : "STRING",
+    "name" : "showLithColor",
+    "documentation" : "Show Lith color",
+    "longMnemonic" : "SHLCOLOR",
+    "shortMnemonic" : "WLCO"
+  }, {
+    "fieldId" : 16,
+    "type" : "STRING",
+    "name" : "showLithTexture",
+    "documentation" : "Show Lith texture",
+    "longMnemonic" : "SHLTEXT",
+    "shortMnemonic" : "WLTX"
+  }, {
+    "fieldId" : 17,
+    "type" : "STRING",
+    "name" : "showLithHardness",
+    "documentation" : "Show Lith hardness",
+    "longMnemonic" : "SHLHARD",
+    "shortMnemonic" : "WLHD"
+  }, {
+    "fieldId" : 18,
+    "type" : "STRING",
+    "name" : "showLithGrainSize",
+    "documentation" : "Show Lith grain size",
+    "longMnemonic" : "SHLSIZE",
+    "shortMnemonic" : "WLSZ"
+  }, {
+    "fieldId" : 19,
+    "type" : "STRING",
+    "name" : "showLithRoundness",
+    "documentation" : "Show Lith roundness",
+    "longMnemonic" : "SHLROUND",
+    "shortMnemonic" : "WLRD"
+  }, {
+    "fieldId" : 20,
+    "type" : "STRING",
+    "name" : "showLithSorting",
+    "documentation" : "Show Lith sorting",
+    "longMnemonic" : "SHLSORT",
+    "shortMnemonic" : "WLSO"
+  }, {
+    "fieldId" : 21,
+    "type" : "STRING",
+    "name" : "showLithMatrixCement",
+    "documentation" : "Show Lith matrix/cement",
+    "longMnemonic" : "SHLMC",
+    "shortMnemonic" : "WLMC"
+  }, {
+    "fieldId" : 22,
+    "type" : "STRING",
+    "name" : "showLithAccessories",
+    "documentation" : "Show Lith accessories",
+    "longMnemonic" : "SHLACC",
+    "shortMnemonic" : "WLAC"
+  }, {
+    "fieldId" : 23,
+    "type" : "STRING",
+    "name" : "showLithPorosityVisible",
+    "documentation" : "Show Lith porosity -visible",
+    "longMnemonic" : "SHLPORV",
+    "shortMnemonic" : "WLPV"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "showLithPorosityMeas",
+    "documentation" : "Show Lith porosity -meas",
+    "longMnemonic" : "SHLPORM",
+    "shortMnemonic" : "WLPM"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "showLithPermeability",
+    "documentation" : "Show Lith permeability",
+    "longMnemonic" : "SHLPERM",
+    "shortMnemonic" : "WLPE"
+  }, {
+    "fieldId" : 26,
+    "type" : "STRING",
+    "name" : "showLithStainDescription",
+    "documentation" : "Show Lith stain description",
+    "longMnemonic" : "SHLSTAIN",
+    "shortMnemonic" : "WLST"
+  }, {
+    "fieldId" : 27,
+    "type" : "STRING",
+    "name" : "showLithFluorDescription",
+    "documentation" : "Show Lith fluor description",
+    "longMnemonic" : "SHLFLUOR",
+    "shortMnemonic" : "WLFL"
+  }, {
+    "fieldId" : 28,
+    "type" : "STRING",
+    "name" : "showLithCutDescription",
+    "documentation" : "Show Lith cut description",
+    "longMnemonic" : "SHLCUT",
+    "shortMnemonic" : "WLCT"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "showLithCuttingsGas",
+    "documentation" : "Show Lith cuttings gas",
+    "longMnemonic" : "SHLGCUT",
+    "shortMnemonic" : "WLGC"
+  }, {
+    "fieldId" : 30,
+    "type" : "LONG",
+    "name" : "showTitratedSalinity",
+    "documentation" : "Show titrated salinity",
+    "longMnemonic" : "SHSAL",
+    "shortMnemonic" : "WSAL"
+  }, {
+    "fieldId" : 31,
+    "type" : "LONG",
+    "name" : "showMudSmpleMethane",
+    "documentation" : "Show Mud Smple Methane",
+    "longMnemonic" : "METHMUD",
+    "shortMnemonic" : "MTHM"
+  }, {
+    "fieldId" : 32,
+    "type" : "LONG",
+    "name" : "showMudSmpleEthane",
+    "documentation" : "Show Mud Smple Ethane",
+    "longMnemonic" : "ETHMUD",
+    "shortMnemonic" : "ETHM"
+  }, {
+    "fieldId" : 33,
+    "type" : "LONG",
+    "name" : "showMudSmplePropane",
+    "documentation" : "Show Mud Smple Propane",
+    "longMnemonic" : "PROPMUD",
+    "shortMnemonic" : "PRPM"
+  }, {
+    "fieldId" : 34,
+    "type" : "LONG",
+    "name" : "showMudSmpleIButane",
+    "documentation" : "Show Mud Smple I-Butane",
+    "longMnemonic" : "IBUTMUD",
+    "shortMnemonic" : "IBTM"
+  }, {
+    "fieldId" : 35,
+    "type" : "LONG",
+    "name" : "showMudSmpleNButane",
+    "documentation" : "Show Mud Smple N-Butane",
+    "longMnemonic" : "NBUTMUD",
+    "shortMnemonic" : "NBTM"
+  }, {
+    "fieldId" : 36,
+    "type" : "LONG",
+    "name" : "showMudSmpleIPentane",
+    "documentation" : "Show Mud Smple I-Pentane",
+    "longMnemonic" : "IPENMUD",
+    "shortMnemonic" : "IPNM"
+  }, {
+    "fieldId" : 37,
+    "type" : "LONG",
+    "name" : "showMudSmpleNPentane",
+    "documentation" : "Show Mud Smple N-Pentane",
+    "longMnemonic" : "NPENMUD",
+    "shortMnemonic" : "NPNM"
+  }, {
+    "fieldId" : 38,
+    "type" : "LONG",
+    "name" : "showMudSmpleEPentane",
+    "documentation" : "Show Mud Smple N-Pentane",
+    "longMnemonic" : "EPENMUD",
+    "shortMnemonic" : "EPNM"
+  }, {
+    "fieldId" : 39,
+    "type" : "LONG",
+    "name" : "showMudSmpleIHexane",
+    "documentation" : "Show Mud Smple I-Hexane",
+    "longMnemonic" : "IHEXMUD",
+    "shortMnemonic" : "IHXM"
+  }, {
+    "fieldId" : 40,
+    "type" : "LONG",
+    "name" : "showMudSmpleNHexane",
+    "documentation" : "Show Mud Smple N-Hexane",
+    "longMnemonic" : "NHEXMUD",
+    "shortMnemonic" : "NHXM"
+  }, {
+    "fieldId" : 41,
+    "type" : "STRING",
+    "name" : "showComments",
+    "documentation" : "Show Comments",
+    "longMnemonic" : "SHOWCOMM",
+    "shortMnemonic" : "WCOM"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

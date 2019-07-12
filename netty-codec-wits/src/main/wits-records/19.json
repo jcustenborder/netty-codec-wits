@@ -1,0 +1,664 @@
+{
+  "name" : "ConfigurationRecord",
+  "documentation" : "Manually-entered data. Record is sent when new data values are available",
+  "recordId" : 19,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 10,
+    "type" : "SHORT",
+    "name" : "noDrillStringSections",
+    "documentation" : "No. Drill String Sections",
+    "longMnemonic" : "DSNUM",
+    "shortMnemonic" : "DSNO"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "dsSection1Od",
+    "documentation" : "DS Section 1 OD",
+    "longMnemonic" : "DS1OD",
+    "shortMnemonic" : "D1OD"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "dsSection1Id",
+    "documentation" : "DS Section 1 ID",
+    "longMnemonic" : "DS1ID",
+    "shortMnemonic" : "D1ID"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "dsSection1ToolJointId",
+    "documentation" : "DS Section 1 Tool Joint ID",
+    "longMnemonic" : "DS1JID",
+    "shortMnemonic" : "D1JI"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "dsSection1ToolJointOd",
+    "documentation" : "DS Section 1 Tool Joint OD",
+    "longMnemonic" : "DS1JOD",
+    "shortMnemonic" : "D1JO"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "dsSection1MassLength",
+    "documentation" : "DS Section 1 Mass/Length",
+    "longMnemonic" : "DS1MASS",
+    "shortMnemonic" : "D1MA"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "dsSection1Length",
+    "documentation" : "DS Section 1 Length",
+    "longMnemonic" : "DS1LEN",
+    "shortMnemonic" : "D1LE"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "dsSection2Od",
+    "documentation" : "DS Section 2 OD",
+    "longMnemonic" : "DS2OD",
+    "shortMnemonic" : "D2OD"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "dsSection2Id",
+    "documentation" : "DS Section 2 ID",
+    "longMnemonic" : "DS2ID",
+    "shortMnemonic" : "D2ID"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "dsSection2ToolJointId",
+    "documentation" : "DS Section 2 Tool Joint ID",
+    "longMnemonic" : "DS2JID",
+    "shortMnemonic" : "D2JI"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "dsSection2ToolJointOd",
+    "documentation" : "DS Section 2 Tool Joint OD",
+    "longMnemonic" : "DS2JOD",
+    "shortMnemonic" : "D2JO"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "dsSection2MassLength",
+    "documentation" : "DS Section 2 Mass/Length",
+    "longMnemonic" : "DS2MASS",
+    "shortMnemonic" : "D2MA"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "dsSection2Length",
+    "documentation" : "DS Section 2 Length",
+    "longMnemonic" : "DS2LEN",
+    "shortMnemonic" : "D2LE"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "dsSection3Od",
+    "documentation" : "DS Section 3 OD",
+    "longMnemonic" : "DS3OD",
+    "shortMnemonic" : "D3OD"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "dsSection3Id",
+    "documentation" : "DS Section 3 ID",
+    "longMnemonic" : "DS3ID",
+    "shortMnemonic" : "D3ID"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "dsSection3ToolJointId",
+    "documentation" : "DS Section 3 Tool Joint ID",
+    "longMnemonic" : "DS3JID",
+    "shortMnemonic" : "D3JI"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "dsSection3ToolJointOd",
+    "documentation" : "DS Section 3 Tool Joint OD",
+    "longMnemonic" : "DS3JOD",
+    "shortMnemonic" : "D3JO"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "dsSection3MassLength",
+    "documentation" : "DS Section 3 Mass/Length",
+    "longMnemonic" : "DS3MASS",
+    "shortMnemonic" : "D3MA"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "dsSection3Length",
+    "documentation" : "DS Section 3 Length",
+    "longMnemonic" : "DS3LEN",
+    "shortMnemonic" : "D3LE"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "dsSection4Od",
+    "documentation" : "DS Section 4 OD",
+    "longMnemonic" : "DS4OD",
+    "shortMnemonic" : "D4OD"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "dsSection4Id",
+    "documentation" : "DS Section 4 ID",
+    "longMnemonic" : "DS4ID",
+    "shortMnemonic" : "D4ID"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "dsSection4ToolJointId",
+    "documentation" : "DS Section 4 Tool Joint ID",
+    "longMnemonic" : "DS4JID",
+    "shortMnemonic" : "D4JI"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "dsSection4ToolJointOd",
+    "documentation" : "DS Section 4 Tool Joint OD",
+    "longMnemonic" : "DS4JOD",
+    "shortMnemonic" : "D4JO"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "dsSection4MassLength",
+    "documentation" : "DS Section 4 Mass/Length",
+    "longMnemonic" : "DS4MASS",
+    "shortMnemonic" : "D4MA"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "dsSection4Length",
+    "documentation" : "DS Section 4 Length",
+    "longMnemonic" : "DS4LEN",
+    "shortMnemonic" : "D4LE"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "dsSection5Od",
+    "documentation" : "DS Section 5 OD",
+    "longMnemonic" : "DS5OD",
+    "shortMnemonic" : "D5OD"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "dsSection5Id",
+    "documentation" : "DS Section 5 ID",
+    "longMnemonic" : "DS5ID",
+    "shortMnemonic" : "D5ID"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "dsSection5ToolJointId",
+    "documentation" : "DS Section 5 Tool Joint ID",
+    "longMnemonic" : "DS5JID",
+    "shortMnemonic" : "D5JI"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "dsSection5ToolJointOd",
+    "documentation" : "DS Section 5 Tool Joint OD",
+    "longMnemonic" : "DS5JOD",
+    "shortMnemonic" : "D5JO"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "dsSection5MassLength",
+    "documentation" : "DS Section 5 Mass/Length",
+    "longMnemonic" : "DS5MASS",
+    "shortMnemonic" : "D5MA"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "dsSection5Length",
+    "documentation" : "DS Section 5 Length",
+    "longMnemonic" : "DS5LEN",
+    "shortMnemonic" : "D5LE"
+  }, {
+    "fieldId" : 41,
+    "type" : "FLOAT",
+    "name" : "dsSection6Od",
+    "documentation" : "DS Section 6 OD",
+    "longMnemonic" : "DS6OD",
+    "shortMnemonic" : "D6OD"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "dsSection6Id",
+    "documentation" : "DS Section 6 ID",
+    "longMnemonic" : "DS6ID",
+    "shortMnemonic" : "D6ID"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "dsSection6ToolJointId",
+    "documentation" : "DS Section 6 Tool Joint ID",
+    "longMnemonic" : "DS6JID",
+    "shortMnemonic" : "D6JI"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "dsSection6ToolJointOd",
+    "documentation" : "DS Section 6 Tool Joint OD",
+    "longMnemonic" : "DS6JOD",
+    "shortMnemonic" : "D6JO"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "dsSection6MassLength",
+    "documentation" : "DS Section 6 Mass/Length",
+    "longMnemonic" : "DS6MASS",
+    "shortMnemonic" : "D6MA"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "kellyId",
+    "documentation" : "Kelly ID",
+    "longMnemonic" : "KELLYID",
+    "shortMnemonic" : "KID"
+  }, {
+    "fieldId" : 47,
+    "type" : "FLOAT",
+    "name" : "kellyLength",
+    "documentation" : "Kelly Length",
+    "longMnemonic" : "KELLYLEN",
+    "shortMnemonic" : "KLEN"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "drillPipeStandLength",
+    "documentation" : "Drill Pipe Stand Length",
+    "longMnemonic" : "DPSTDLEN",
+    "shortMnemonic" : "SLEN"
+  }, {
+    "fieldId" : 49,
+    "type" : "SHORT",
+    "name" : "noJointsStand",
+    "documentation" : "No. Joints/Stand",
+    "longMnemonic" : "DPSTDJNT",
+    "shortMnemonic" : "SJNT"
+  }, {
+    "fieldId" : 50,
+    "type" : "SHORT",
+    "name" : "noHoleSections",
+    "documentation" : "No. Hole Sections",
+    "longMnemonic" : "HOLENUM",
+    "shortMnemonic" : "HLNO"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "holeSection1Diam",
+    "documentation" : "Hole Section 1 Diam",
+    "longMnemonic" : "HL1DIAM",
+    "shortMnemonic" : "H1DI"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "holeSection1Length",
+    "documentation" : "Hole Section 1 Length",
+    "longMnemonic" : "HL1LEN",
+    "shortMnemonic" : "H1LE"
+  }, {
+    "fieldId" : 53,
+    "type" : "FLOAT",
+    "name" : "holeSection2Diam",
+    "documentation" : "Hole Section 2 Diam",
+    "longMnemonic" : "HL2DIAM",
+    "shortMnemonic" : "H2DI"
+  }, {
+    "fieldId" : 54,
+    "type" : "FLOAT",
+    "name" : "holeSection2Length",
+    "documentation" : "Hole Section 2 Length",
+    "longMnemonic" : "HL2LEN",
+    "shortMnemonic" : "H2LE"
+  }, {
+    "fieldId" : 55,
+    "type" : "FLOAT",
+    "name" : "holeSection3Diam",
+    "documentation" : "Hole Section 3 Diam",
+    "longMnemonic" : "HL3DIAM",
+    "shortMnemonic" : "H3DI"
+  }, {
+    "fieldId" : 56,
+    "type" : "FLOAT",
+    "name" : "holeSection3Length",
+    "documentation" : "Hole Section 3 Length",
+    "longMnemonic" : "HL3LEN",
+    "shortMnemonic" : "H3LE"
+  }, {
+    "fieldId" : 57,
+    "type" : "FLOAT",
+    "name" : "holeSection4Diam",
+    "documentation" : "Hole Section 4 Diam",
+    "longMnemonic" : "HL4DIAM",
+    "shortMnemonic" : "H4DI"
+  }, {
+    "fieldId" : 58,
+    "type" : "FLOAT",
+    "name" : "holeSection4Length",
+    "documentation" : "Hole Section 4 Length",
+    "longMnemonic" : "HL4LEN",
+    "shortMnemonic" : "H4LE"
+  }, {
+    "fieldId" : 59,
+    "type" : "FLOAT",
+    "name" : "holeSection5Diam",
+    "documentation" : "Hole Section 5 Diam",
+    "longMnemonic" : "HL5DIAM",
+    "shortMnemonic" : "H5DI"
+  }, {
+    "fieldId" : 60,
+    "type" : "FLOAT",
+    "name" : "pump1Capacity",
+    "documentation" : "Pump 1 Capacity",
+    "longMnemonic" : "PUMP1CAP",
+    "shortMnemonic" : "P1CA"
+  }, {
+    "fieldId" : 61,
+    "type" : "SHORT",
+    "name" : "pump1Efficiency",
+    "documentation" : "Pump 1 Efficiency",
+    "longMnemonic" : "PUMP1EFF",
+    "shortMnemonic" : "P1EF"
+  }, {
+    "fieldId" : 62,
+    "type" : "FLOAT",
+    "name" : "pump2Capacity",
+    "documentation" : "Pump 2 Capacity",
+    "longMnemonic" : "PUMP2CAP",
+    "shortMnemonic" : "P2CA"
+  }, {
+    "fieldId" : 63,
+    "type" : "SHORT",
+    "name" : "pump2Efficiency",
+    "documentation" : "Pump 2 Efficiency",
+    "longMnemonic" : "PUMP2EFF",
+    "shortMnemonic" : "P2EF"
+  }, {
+    "fieldId" : 64,
+    "type" : "FLOAT",
+    "name" : "pump3Capacity",
+    "documentation" : "Pump 3 Capacity",
+    "longMnemonic" : "PUMP3CAP",
+    "shortMnemonic" : "P3CA"
+  }, {
+    "fieldId" : 65,
+    "type" : "SHORT",
+    "name" : "pump3Efficiency",
+    "documentation" : "Pump 3 Efficiency",
+    "longMnemonic" : "PUMP3EFF",
+    "shortMnemonic" : "P3EF"
+  }, {
+    "fieldId" : 66,
+    "type" : "SHORT",
+    "name" : "rigOperatingCostHour",
+    "documentation" : "Rig Operating Cost/Hour",
+    "longMnemonic" : "RIGCOST",
+    "shortMnemonic" : "RIGC"
+  }, {
+    "fieldId" : 67,
+    "type" : "FLOAT",
+    "name" : "tripRateDistTime",
+    "documentation" : "Trip Rate (Dist/Time)",
+    "longMnemonic" : "TRIPRATE",
+    "shortMnemonic" : "TRRT"
+  }, {
+    "fieldId" : 68,
+    "type" : "FLOAT",
+    "name" : "killLineId",
+    "documentation" : "Kill Line ID",
+    "longMnemonic" : "KILLID",
+    "shortMnemonic" : "KLID"
+  }, {
+    "fieldId" : 69,
+    "type" : "FLOAT",
+    "name" : "killLineJointId",
+    "documentation" : "Kill Line Joint ID",
+    "longMnemonic" : "KILLJID",
+    "shortMnemonic" : "KLJD"
+  }, {
+    "fieldId" : 70,
+    "type" : "SHORT",
+    "name" : "killLineJointFraction",
+    "documentation" : "Kill Line Joint Fraction",
+    "longMnemonic" : "KILLJF",
+    "shortMnemonic" : "KLJF"
+  }, {
+    "fieldId" : 71,
+    "type" : "FLOAT",
+    "name" : "killLineLength",
+    "documentation" : "Kill Line Length",
+    "longMnemonic" : "KILLLEN",
+    "shortMnemonic" : "KLLE"
+  }, {
+    "fieldId" : 72,
+    "type" : "FLOAT",
+    "name" : "chokeLineId",
+    "documentation" : "Choke Line ID",
+    "longMnemonic" : "CHKID",
+    "shortMnemonic" : "CHID"
+  }, {
+    "fieldId" : 73,
+    "type" : "FLOAT",
+    "name" : "chokeLineJointId",
+    "documentation" : "Choke Line Joint ID",
+    "longMnemonic" : "CHKJID",
+    "shortMnemonic" : "CHJD"
+  }, {
+    "fieldId" : 74,
+    "type" : "SHORT",
+    "name" : "chokeLineJointFraction",
+    "documentation" : "Choke Line Joint Fraction",
+    "longMnemonic" : "CHKJF",
+    "shortMnemonic" : "CHJF"
+  }, {
+    "fieldId" : 75,
+    "type" : "FLOAT",
+    "name" : "chokeLineLength",
+    "documentation" : "Choke Line Length",
+    "longMnemonic" : "CHKLEN",
+    "shortMnemonic" : "CHLE"
+  }, {
+    "fieldId" : 76,
+    "type" : "FLOAT",
+    "name" : "depthCasingShoeMeas",
+    "documentation" : "Depth Casing Shoe (meas)",
+    "longMnemonic" : "DEPTCSGM",
+    "shortMnemonic" : "DCGM"
+  }, {
+    "fieldId" : 77,
+    "type" : "FLOAT",
+    "name" : "depthCasingShoeVert",
+    "documentation" : "Depth Casing Shoe (vert)",
+    "longMnemonic" : "DEPTCSGV",
+    "shortMnemonic" : "DCGV"
+  }, {
+    "fieldId" : 78,
+    "type" : "FLOAT",
+    "name" : "depthPitMeas",
+    "documentation" : "Depth PIT (meas)",
+    "longMnemonic" : "DEPTPITM",
+    "shortMnemonic" : "DPTM"
+  }, {
+    "fieldId" : 79,
+    "type" : "FLOAT",
+    "name" : "depthPitVert",
+    "documentation" : "Depth PIT (vert)",
+    "longMnemonic" : "DEPTPITV",
+    "shortMnemonic" : "DPTV"
+  }, {
+    "fieldId" : 80,
+    "type" : "FLOAT",
+    "name" : "fracPressureGradAtPit",
+    "documentation" : "Frac Pressure Grad at PIT",
+    "longMnemonic" : "FPGPIT",
+    "shortMnemonic" : "FPIT"
+  }, {
+    "fieldId" : 81,
+    "type" : "STRING",
+    "name" : "drillingContractor",
+    "documentation" : "Drilling Contractor",
+    "longMnemonic" : "DRLGCONT",
+    "shortMnemonic" : "CONT"
+  }, {
+    "fieldId" : 82,
+    "type" : "STRING",
+    "name" : "rigName",
+    "documentation" : "Rig Name",
+    "longMnemonic" : "RIGNAME",
+    "shortMnemonic" : "RIG"
+  }, {
+    "fieldId" : 83,
+    "type" : "STRING",
+    "name" : "rigType",
+    "documentation" : "Rig Type",
+    "longMnemonic" : "RIGTYPE",
+    "shortMnemonic" : "RTYP"
+  }, {
+    "fieldId" : 84,
+    "type" : "STRING",
+    "name" : "vendor1NameService",
+    "documentation" : "Vendor 1 Name/Service",
+    "longMnemonic" : "VENDOR1",
+    "shortMnemonic" : "VEN1"
+  }, {
+    "fieldId" : 85,
+    "type" : "STRING",
+    "name" : "vendor2NameService",
+    "documentation" : "Vendor 2 Name/Service",
+    "longMnemonic" : "VENDOR2",
+    "shortMnemonic" : "VEN2"
+  }, {
+    "fieldId" : 86,
+    "type" : "STRING",
+    "name" : "vendor3NameService",
+    "documentation" : "Vendor 3 Name/Service",
+    "longMnemonic" : "VENDOR3",
+    "shortMnemonic" : "VEN3"
+  }, {
+    "fieldId" : 87,
+    "type" : "STRING",
+    "name" : "vendor4NameService",
+    "documentation" : "Vendor 4 Name/Service",
+    "longMnemonic" : "VENDOR4",
+    "shortMnemonic" : "VEN4"
+  }, {
+    "fieldId" : 88,
+    "type" : "STRING",
+    "name" : "vendor5NameService",
+    "documentation" : "Vendor 5 Name/Service",
+    "longMnemonic" : "VENDOR5",
+    "shortMnemonic" : "VEN5"
+  }, {
+    "fieldId" : 89,
+    "type" : "STRING",
+    "name" : "vendor6NameService",
+    "documentation" : "Vendor 6 Name/Service",
+    "longMnemonic" : "VENDOR6",
+    "shortMnemonic" : "VEN6"
+  }, {
+    "fieldId" : 90,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 91,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 92,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 93,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 94,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

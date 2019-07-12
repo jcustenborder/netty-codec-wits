@@ -1,0 +1,272 @@
+{
+  "name" : "CementingRecord",
+  "documentation" : "Data acquired in real-time (possibly via Level 0 transfer). Averages are computed over the triggering interval and reset when the record is transmitted. Record only transmitted during a cementing operation",
+  "recordId" : 17,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthCasingShoeMeas",
+    "documentation" : "Depth Casing Shoe (meas)",
+    "longMnemonic" : "DEPTCSGM",
+    "shortMnemonic" : "DCGM"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthCasingShoeVert",
+    "documentation" : "Depth Casing Shoe (vert)",
+    "longMnemonic" : "DEPTCSGV",
+    "shortMnemonic" : "DCGV"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "cemPumpPressureAvg",
+    "documentation" : "Cem Pump Pressure (avg)",
+    "longMnemonic" : "CEMPPA",
+    "shortMnemonic" : "CPPA"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "hookloadAvg",
+    "documentation" : "Hookload (avg)",
+    "longMnemonic" : "HKLA",
+    "shortMnemonic" : "HKLA"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "blockPosition",
+    "documentation" : "Block Position",
+    "longMnemonic" : "BLKPOS",
+    "shortMnemonic" : "BPOS"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "cemFlowRateInCalc",
+    "documentation" : "Cem Flow Rate In (calc)",
+    "longMnemonic" : "CEMFIC",
+    "shortMnemonic" : "CFIC"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "cemFlowRateInAvg",
+    "documentation" : "Cem Flow Rate In (avg)",
+    "longMnemonic" : "CEMFIA",
+    "shortMnemonic" : "CFIA"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "cemFlowRateOutAvg",
+    "documentation" : "Cem Flow Rate Out (avg)",
+    "longMnemonic" : "CEMFOA",
+    "shortMnemonic" : "CFOA"
+  }, {
+    "fieldId" : 18,
+    "type" : "SHORT",
+    "name" : "cemFlowOut",
+    "documentation" : "Cem Flow Out %",
+    "longMnemonic" : "CEMFOP",
+    "shortMnemonic" : "CFOP"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "cemFluidDensInAvg",
+    "documentation" : "Cem Fluid Dens In (avg)",
+    "longMnemonic" : "CEMDIA",
+    "shortMnemonic" : "CDIA"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "cemFluidDensOutAvg",
+    "documentation" : "Cem Fluid Dens Out (avg)",
+    "longMnemonic" : "CEMDOA",
+    "shortMnemonic" : "CDOA"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "ecdAtCasingShoe",
+    "documentation" : "ECD at Casing Shoe",
+    "longMnemonic" : "ECDCSG",
+    "shortMnemonic" : "ECDC"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "cemFluidTempInAvg",
+    "documentation" : "Cem Fluid Temp In (avg)",
+    "longMnemonic" : "CEMTIA",
+    "shortMnemonic" : "CTIA"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "cemFluidTempOutAvg",
+    "documentation" : "Cem Fluid Temp Out (avg)",
+    "longMnemonic" : "CEMTOA",
+    "shortMnemonic" : "CTOA"
+  }, {
+    "fieldId" : 24,
+    "type" : "SHORT",
+    "name" : "cemStageNumber",
+    "documentation" : "Cem Stage Number",
+    "longMnemonic" : "CEMSTAGE",
+    "shortMnemonic" : "CSTG"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "cemDepthToDvTool",
+    "documentation" : "Cem Depth to DV Tool",
+    "longMnemonic" : "DEPTDVT",
+    "shortMnemonic" : "DDVT"
+  }, {
+    "fieldId" : 26,
+    "type" : "STRING",
+    "name" : "cemFluidTypeBatch",
+    "documentation" : "Cem Fluid Type/Batch",
+    "longMnemonic" : "CEMFTYPE",
+    "shortMnemonic" : "CTYP"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "cemCumulativeReturns",
+    "documentation" : "Cem Cumulative Returns",
+    "longMnemonic" : "CEMCUMRT",
+    "shortMnemonic" : "CCRT"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "cemIndivVolPumped",
+    "documentation" : "Cem Indiv Vol Pumped",
+    "longMnemonic" : "CEMIVOL",
+    "shortMnemonic" : "CIVL"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "cemCementVolPumped",
+    "documentation" : "Cem Cement Vol Pumped",
+    "longMnemonic" : "CEMCVOL",
+    "shortMnemonic" : "CCVL"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "cemTotalVolPumped",
+    "documentation" : "Cem Total Vol Pumped",
+    "longMnemonic" : "CEMTVOL",
+    "shortMnemonic" : "CTVL"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "cemVolumeToBumpPlug",
+    "documentation" : "Cem Volume to Bump Plug",
+    "longMnemonic" : "CEMBPVOL",
+    "shortMnemonic" : "CBVL"
+  }, {
+    "fieldId" : 32,
+    "type" : "STRING",
+    "name" : "cemNoStatusOfPlugS",
+    "documentation" : "Cem No./Status of Plug(s)",
+    "longMnemonic" : "CEMPLUGS",
+    "shortMnemonic" : "CPLG"
+  }, {
+    "fieldId" : 33,
+    "type" : "STRING",
+    "name" : "cemJobType",
+    "documentation" : "Cem Job Type",
+    "longMnemonic" : "CEMJTYP",
+    "shortMnemonic" : "CJTY"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

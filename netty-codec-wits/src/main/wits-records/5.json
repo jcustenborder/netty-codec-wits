@@ -1,0 +1,167 @@
+{
+  "name" : "TrippingCasingTimeBasedRecord",
+  "documentation" : "Data aquired in real-time and computed over the trigger interval. Only sent when tripping. Average, minimum and maximum values reset when this record OR Record 6 (Tripping/Casing Connection Based) is transmitted",
+  "recordId" : 5,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthBitMeas",
+    "documentation" : "Depth Bit (meas)",
+    "longMnemonic" : "DEPTBITM",
+    "shortMnemonic" : "DBTM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthBitVert",
+    "documentation" : "Depth Bit (vert)",
+    "longMnemonic" : "DEPTBITV",
+    "shortMnemonic" : "DBTV"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "depthHoleMeas",
+    "documentation" : "Depth Hole (meas)",
+    "longMnemonic" : "DEPTMEAS",
+    "shortMnemonic" : "DMEA"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "depthHoleVert",
+    "documentation" : "Depth Hole (vert)",
+    "longMnemonic" : "DEPTVERT",
+    "shortMnemonic" : "DVER"
+  }, {
+    "fieldId" : 12,
+    "type" : "SHORT",
+    "name" : "tripNumber",
+    "documentation" : "Trip Number",
+    "longMnemonic" : "TRIPNUM",
+    "shortMnemonic" : "TNUM"
+  }, {
+    "fieldId" : 13,
+    "type" : "STRING",
+    "name" : "inSlipsStatus",
+    "documentation" : "In-Slips Status",
+    "longMnemonic" : "STATUSIS",
+    "shortMnemonic" : "STIS"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "hookloadAvg",
+    "documentation" : "Hookload (avg)",
+    "longMnemonic" : "HKLA",
+    "shortMnemonic" : "HKLA"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "blockPosition",
+    "documentation" : "Block Position",
+    "longMnemonic" : "BLKPOS",
+    "shortMnemonic" : "BPOS"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "runningSpeedUpMax",
+    "documentation" : "Running Speed - up (max)",
+    "longMnemonic" : "RSUX",
+    "shortMnemonic" : "RSUX"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "runningSpeedDownMax",
+    "documentation" : "Running Speed - down (max)",
+    "longMnemonic" : "RSDX",
+    "shortMnemonic" : "RSDX"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "fillGainVolumeObsCum",
+    "documentation" : "Fill/Gain Volume Obs.(cum)",
+    "longMnemonic" : "FVOLOC",
+    "shortMnemonic" : "FVOC"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

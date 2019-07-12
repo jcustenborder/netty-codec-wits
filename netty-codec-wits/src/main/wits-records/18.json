@@ -1,0 +1,223 @@
+{
+  "name" : "DrillStemTestingRecord",
+  "documentation" : "Data acquired in real-time (possibly via Level 0 transfer). Record only sent during a drill stem testing operation",
+  "recordId" : 18,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "STRING",
+    "name" : "dstIdentification",
+    "documentation" : "DST identification",
+    "longMnemonic" : "DSTID",
+    "shortMnemonic" : "DSID"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "dstIntvlTopDepthMeas",
+    "documentation" : "DST Intvl Top Depth (meas)",
+    "longMnemonic" : "DEPTDITM",
+    "shortMnemonic" : "DDTM"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "dstIntvlTopDepthVert",
+    "documentation" : "DST Intvl Top Depth (vert)",
+    "longMnemonic" : "DEPTDITV",
+    "shortMnemonic" : "DDTV"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "dstIntvlBottDepthMeas",
+    "documentation" : "DST Intvl Bott Depth (meas)",
+    "longMnemonic" : "DEPTDIBM",
+    "shortMnemonic" : "DDBM"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "dstIntvlBottDepthVert",
+    "documentation" : "DST Intvl Bott Depth (vert)",
+    "longMnemonic" : "DEPTDIBV",
+    "shortMnemonic" : "DDBV"
+  }, {
+    "fieldId" : 13,
+    "type" : "LONG",
+    "name" : "dstToolTime",
+    "documentation" : "DST Tool Time",
+    "longMnemonic" : "DSTTTIME",
+    "shortMnemonic" : "DTTI"
+  }, {
+    "fieldId" : 14,
+    "type" : "SHORT",
+    "name" : "dstStateOfWell",
+    "documentation" : "DST State of Well",
+    "longMnemonic" : "DSTSTATE",
+    "shortMnemonic" : "DSTA"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "dstSurfPressureTubing",
+    "documentation" : "DST Surf Pressure, Tubing",
+    "longMnemonic" : "DSTSPTUB",
+    "shortMnemonic" : "DSPT"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "dstSurfPressureCasing",
+    "documentation" : "DST Surf Pressure, Casing",
+    "longMnemonic" : "DSTSPCAS",
+    "shortMnemonic" : "DSPC"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "dstSurfTempTubing",
+    "documentation" : "DST Surf Temp, Tubing",
+    "longMnemonic" : "DSTSTTUB",
+    "shortMnemonic" : "DSTT"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "dstBottomHolePressure",
+    "documentation" : "DST Bottom Hole Pressure",
+    "longMnemonic" : "DSTBHP",
+    "shortMnemonic" : "DBHP"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "dstBottomHoleTemp",
+    "documentation" : "DST Bottom Hole Temp",
+    "longMnemonic" : "DSTBHT",
+    "shortMnemonic" : "DBHT"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "dstLiquidFlowRate",
+    "documentation" : "DST Liquid Flow Rate",
+    "longMnemonic" : "DSTLIQFR",
+    "shortMnemonic" : "DLFR"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "dstGasFlowRate",
+    "documentation" : "DST Gas Flow Rate",
+    "longMnemonic" : "DSTGASFR",
+    "shortMnemonic" : "DGFR"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "dstTotalFlowRate",
+    "documentation" : "DST Total Flow Rate",
+    "longMnemonic" : "DSTTOTFR",
+    "shortMnemonic" : "DTFR"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "dstCumLiquidProduction",
+    "documentation" : "DST Cum Liquid Production",
+    "longMnemonic" : "DSTCLP",
+    "shortMnemonic" : "DCLP"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "dstCumGasProduction",
+    "documentation" : "DST Cum Gas Production",
+    "longMnemonic" : "DSTCGP",
+    "shortMnemonic" : "DCGP"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "dstCumTotalProduction",
+    "documentation" : "DST Cum Total Production",
+    "longMnemonic" : "DSTCTP",
+    "shortMnemonic" : "DCTP"
+  }, {
+    "fieldId" : 26,
+    "type" : "LONG",
+    "name" : "hydrogenSulfideAvg",
+    "documentation" : "Hydrogen Sulfide (avg)",
+    "longMnemonic" : "HSA",
+    "shortMnemonic" : "HSA"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

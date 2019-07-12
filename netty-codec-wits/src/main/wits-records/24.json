@@ -1,0 +1,454 @@
+{
+  "name" : "VesselMotionMooringStatusRecord",
+  "documentation" : "Acquired sensor data (possibly via WITS Level 0 transfer), or manually-entered data. The record is transmitted and any automatic computations are reset at the end of the triggering interval",
+  "recordId" : 24,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "waterDepthMean",
+    "documentation" : "Water Depth (mean)",
+    "longMnemonic" : "WATDEPT",
+    "shortMnemonic" : "WDPM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "tide",
+    "documentation" : "Tide",
+    "longMnemonic" : "TIDE",
+    "shortMnemonic" : "TIDE"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "vesselHeading",
+    "documentation" : "Vessel Heading",
+    "longMnemonic" : "VESSHEAD",
+    "shortMnemonic" : "VHED"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "rigVcg",
+    "documentation" : "Rig VCG",
+    "longMnemonic" : "RIGVCG",
+    "shortMnemonic" : "RVCG"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "riserTension",
+    "documentation" : "Riser Tension",
+    "longMnemonic" : "RISTENS",
+    "shortMnemonic" : "RTEN"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "rigOffsetAvg",
+    "documentation" : "Rig Offset (avg)",
+    "longMnemonic" : "OFFSETA",
+    "shortMnemonic" : "OFSA"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "rigOffsetMax",
+    "documentation" : "Rig Offset (max)",
+    "longMnemonic" : "OFFSETX",
+    "shortMnemonic" : "OFSX"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "rigOffsetDirection",
+    "documentation" : "Rig Offset Direction",
+    "longMnemonic" : "OFFSETD",
+    "shortMnemonic" : "OFSD"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "lmrpAngleAvg",
+    "documentation" : "LMRP Angle (avg)",
+    "longMnemonic" : "LMRPANA",
+    "shortMnemonic" : "LANA"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "lmrpAngleMax",
+    "documentation" : "LMRP Angle (max)",
+    "longMnemonic" : "LMRPANX",
+    "shortMnemonic" : "LANX"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "lmrpAngleDirection",
+    "documentation" : "LMRP Angle, Direction",
+    "longMnemonic" : "LMRPAND",
+    "shortMnemonic" : "LAND"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "fluidDensityInRiser",
+    "documentation" : "Fluid Density in Riser",
+    "longMnemonic" : "MDRISER",
+    "shortMnemonic" : "MDRI"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "mooringLine01TensAvg",
+    "documentation" : "Mooring Line #01 Tens(avg)",
+    "longMnemonic" : "MLTA01",
+    "shortMnemonic" : "TA01"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "mooringLine01TensMax",
+    "documentation" : "Mooring Line #01 Tens(max)",
+    "longMnemonic" : "MLTX01",
+    "shortMnemonic" : "TX01"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "mooringLine02TensAvg",
+    "documentation" : "Mooring Line #02 Tens(avg)",
+    "longMnemonic" : "MLTA02",
+    "shortMnemonic" : "TA02"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "mooringLine02TensMax",
+    "documentation" : "Mooring Line #02 Tens(max)",
+    "longMnemonic" : "MLTX02",
+    "shortMnemonic" : "TX02"
+  }, {
+    "fieldId" : 24,
+    "type" : "FLOAT",
+    "name" : "mooringLine03TensAvg",
+    "documentation" : "Mooring Line #03 Tens(avg)",
+    "longMnemonic" : "MLTA03",
+    "shortMnemonic" : "TA03"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "mooringLine03TensMax",
+    "documentation" : "Mooring Line #03 Tens(max)",
+    "longMnemonic" : "MLTX03",
+    "shortMnemonic" : "TX03"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "mooringLine04TensAvg",
+    "documentation" : "Mooring Line #04 Tens(avg)",
+    "longMnemonic" : "MLTA04",
+    "shortMnemonic" : "TA04"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "mooringLine04TensMax",
+    "documentation" : "Mooring Line #04 Tens(max)",
+    "longMnemonic" : "MLTX04",
+    "shortMnemonic" : "TX04"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "mooringLine05TensAvg",
+    "documentation" : "Mooring Line #05 Tens(avg)",
+    "longMnemonic" : "MLTA05",
+    "shortMnemonic" : "TA05"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "mooringLine05TensMax",
+    "documentation" : "Mooring Line #05 Tens(max)",
+    "longMnemonic" : "MLTX05",
+    "shortMnemonic" : "TX05"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "mooringLine06TensAvg",
+    "documentation" : "Mooring Line #06 Tens(avg)",
+    "longMnemonic" : "MLTA06",
+    "shortMnemonic" : "TA06"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "mooringLine06TensMax",
+    "documentation" : "Mooring Line #06 Tens(max)",
+    "longMnemonic" : "MLTX06",
+    "shortMnemonic" : "TX06"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "mooringLine07TensAvg",
+    "documentation" : "Mooring Line #07 Tens(avg)",
+    "longMnemonic" : "MLTA07",
+    "shortMnemonic" : "TA07"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "mooringLine07TensMax",
+    "documentation" : "Mooring Line #07 Tens(max)",
+    "longMnemonic" : "MLTX07",
+    "shortMnemonic" : "TX07"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "mooringLine08TensAvg",
+    "documentation" : "Mooring Line #08 Tens(avg)",
+    "longMnemonic" : "MLTA08",
+    "shortMnemonic" : "TA08"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "mooringLine08TensMax",
+    "documentation" : "Mooring Line #08 Tens(max)",
+    "longMnemonic" : "MLTX08",
+    "shortMnemonic" : "TX08"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "mooringLine09TensAvg",
+    "documentation" : "Mooring Line #09 Tens(avg)",
+    "longMnemonic" : "MLTA09",
+    "shortMnemonic" : "TA09"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "mooringLine09TensMax",
+    "documentation" : "Mooring Line #09 Tens(max)",
+    "longMnemonic" : "MLTX09",
+    "shortMnemonic" : "TX09"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "mooringLine10TensAvg",
+    "documentation" : "Mooring Line #10 Tens(avg)",
+    "longMnemonic" : "MLTA10",
+    "shortMnemonic" : "TA10"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "mooringLine10TensMax",
+    "documentation" : "Mooring Line #10 Tens(max)",
+    "longMnemonic" : "MLTX10",
+    "shortMnemonic" : "TX10"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "mooringLine11TensAvg",
+    "documentation" : "Mooring Line #11 Tens(avg)",
+    "longMnemonic" : "MLTA11",
+    "shortMnemonic" : "TA11"
+  }, {
+    "fieldId" : 41,
+    "type" : "FLOAT",
+    "name" : "mooringLine11TensMax",
+    "documentation" : "Mooring Line #11 Tens(max)",
+    "longMnemonic" : "MLTX11",
+    "shortMnemonic" : "TX11"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "mooringLine12TensAvg",
+    "documentation" : "Mooring Line #12 Tens(avg)",
+    "longMnemonic" : "MLTA12",
+    "shortMnemonic" : "TA12"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "mooringLine12TensMax",
+    "documentation" : "Mooring Line #12 Tens(max)",
+    "longMnemonic" : "MLTX12",
+    "shortMnemonic" : "TX12"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "thruster01Force",
+    "documentation" : "Thruster #01, Force",
+    "longMnemonic" : "THRF01",
+    "shortMnemonic" : "TF01"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "thruster01Direction",
+    "documentation" : "Thruster #01, Direction",
+    "longMnemonic" : "THRD01",
+    "shortMnemonic" : "TD01"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "thruster02Force",
+    "documentation" : "Thruster #02, Force",
+    "longMnemonic" : "THRF02",
+    "shortMnemonic" : "TF02"
+  }, {
+    "fieldId" : 47,
+    "type" : "FLOAT",
+    "name" : "thruster02Direction",
+    "documentation" : "Thruster #02, Direction",
+    "longMnemonic" : "THRD02",
+    "shortMnemonic" : "TD02"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "thruster03Force",
+    "documentation" : "Thruster #03, Force",
+    "longMnemonic" : "THRF03",
+    "shortMnemonic" : "TF03"
+  }, {
+    "fieldId" : 49,
+    "type" : "FLOAT",
+    "name" : "thruster03Direction",
+    "documentation" : "Thruster #03, Direction",
+    "longMnemonic" : "THRD03",
+    "shortMnemonic" : "TD03"
+  }, {
+    "fieldId" : 50,
+    "type" : "FLOAT",
+    "name" : "thruster04Force",
+    "documentation" : "Thruster #04, Force",
+    "longMnemonic" : "THRF04",
+    "shortMnemonic" : "TF04"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "thruster04Direction",
+    "documentation" : "Thruster #04, Direction",
+    "longMnemonic" : "THRD04",
+    "shortMnemonic" : "TD04"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "thruster05Force",
+    "documentation" : "Thruster #05, Force",
+    "longMnemonic" : "THRF05",
+    "shortMnemonic" : "TF05"
+  }, {
+    "fieldId" : 53,
+    "type" : "FLOAT",
+    "name" : "thruster05Direction",
+    "documentation" : "Thruster #05, Direction",
+    "longMnemonic" : "THRD05",
+    "shortMnemonic" : "TD05"
+  }, {
+    "fieldId" : 54,
+    "type" : "FLOAT",
+    "name" : "thruster06Force",
+    "documentation" : "Thruster #06, Force",
+    "longMnemonic" : "THRF06",
+    "shortMnemonic" : "TF06"
+  }, {
+    "fieldId" : 55,
+    "type" : "FLOAT",
+    "name" : "thruster06Direction",
+    "documentation" : "Thruster #06, Direction",
+    "longMnemonic" : "THRF06",
+    "shortMnemonic" : "TD06"
+  }, {
+    "fieldId" : 56,
+    "type" : "FLOAT",
+    "name" : "thruster07Force",
+    "documentation" : "Thruster #07, Force",
+    "longMnemonic" : "THRF07",
+    "shortMnemonic" : "TF07"
+  }, {
+    "fieldId" : 57,
+    "type" : "FLOAT",
+    "name" : "thruster07Direction",
+    "documentation" : "Thruster #07, Direction",
+    "longMnemonic" : "THRD07",
+    "shortMnemonic" : "TD07"
+  }, {
+    "fieldId" : 58,
+    "type" : "FLOAT",
+    "name" : "thruster08Force",
+    "documentation" : "Thruster #08, Force",
+    "longMnemonic" : "THRF08",
+    "shortMnemonic" : "TF08"
+  }, {
+    "fieldId" : 59,
+    "type" : "FLOAT",
+    "name" : "thruster08Direction",
+    "documentation" : "Thruster #08, Direction",
+    "longMnemonic" : "THRD08",
+    "shortMnemonic" : "TD08"
+  }, {
+    "fieldId" : 60,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 61,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 62,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 63,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 64,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

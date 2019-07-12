@@ -1,0 +1,209 @@
+{
+  "name" : "LaggedContinuousMudPropertiesRecord",
+  "documentation" : "Data acquired in real-time and computed over the interval.  Record transmitted and computations reset when the triggering interval occurs.  If a depth interval is specified, it is active until bottoms-up occurs.  Time intervals, if specified, are reset following the transmission of the record by either depth or time trigger.  Not sent if no circulation is taking place",
+  "recordId" : 14,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "depthReturnsMeas",
+    "documentation" : "Depth Returns (meas)",
+    "longMnemonic" : "DEPTRETM",
+    "shortMnemonic" : "DRTM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "depthReturnsVert",
+    "documentation" : "Depth Returns (vert)",
+    "longMnemonic" : "DEPTRETV",
+    "shortMnemonic" : "DRTV"
+  }, {
+    "fieldId" : 10,
+    "type" : "FLOAT",
+    "name" : "mudDensityInLagd",
+    "documentation" : "Mud Density In  (lagd)",
+    "longMnemonic" : "MDIL",
+    "shortMnemonic" : "MDIL"
+  }, {
+    "fieldId" : 11,
+    "type" : "FLOAT",
+    "name" : "mudDensityOutAvg",
+    "documentation" : "Mud Density Out (avg)",
+    "longMnemonic" : "MDOA",
+    "shortMnemonic" : "MDOA"
+  }, {
+    "fieldId" : 12,
+    "type" : "FLOAT",
+    "name" : "mudTemperatureInLagd",
+    "documentation" : "Mud Temperature In   (lagd)",
+    "longMnemonic" : "MTIL",
+    "shortMnemonic" : "MTIL"
+  }, {
+    "fieldId" : 13,
+    "type" : "FLOAT",
+    "name" : "mudTemperatureOutAvg",
+    "documentation" : "Mud Temperature Out  (avg)",
+    "longMnemonic" : "MTOA",
+    "shortMnemonic" : "MTOA"
+  }, {
+    "fieldId" : 14,
+    "type" : "FLOAT",
+    "name" : "mudConductivityInLagd",
+    "documentation" : "Mud Conductivity In  (lagd)",
+    "longMnemonic" : "MCIL",
+    "shortMnemonic" : "MCIL"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "mudConductivityOutAvg",
+    "documentation" : "Mud Conductivity Out (avg)",
+    "longMnemonic" : "MCOA",
+    "shortMnemonic" : "MCOA"
+  }, {
+    "fieldId" : 16,
+    "type" : "FLOAT",
+    "name" : "hydSulfideHazPotAvg",
+    "documentation" : "Hyd.Sulfide Haz.Pot. (avg)",
+    "longMnemonic" : "HSHPA",
+    "shortMnemonic" : "HHPA"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "hydSulfidePhAvg",
+    "documentation" : "Hyd.Sulfide pH (avg)",
+    "longMnemonic" : "HSPHA",
+    "shortMnemonic" : "HPHA"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "hydSulfidePhsAvg",
+    "documentation" : "Hyd.Sulfide pHS (avg)",
+    "longMnemonic" : "HSPHSA",
+    "shortMnemonic" : "HPSA"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "gasInLagd",
+    "documentation" : "Gas In  (lagd)",
+    "longMnemonic" : "GASIL",
+    "shortMnemonic" : "GSIL"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "gasAvg",
+    "documentation" : "Gas (avg)",
+    "longMnemonic" : "GASA",
+    "shortMnemonic" : "GASA"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "gasMax",
+    "documentation" : "Gas (max)",
+    "longMnemonic" : "GASX",
+    "shortMnemonic" : "GASX"
+  }, {
+    "fieldId" : 22,
+    "type" : "LONG",
+    "name" : "carbonDioxideAvg",
+    "documentation" : "Carbon Dioxide (avg)",
+    "longMnemonic" : "CO2A",
+    "shortMnemonic" : "CO2A"
+  }, {
+    "fieldId" : 23,
+    "type" : "LONG",
+    "name" : "hydrogenSulfideAvg",
+    "documentation" : "Hydrogen Sulfide (avg)",
+    "longMnemonic" : "HSA",
+    "shortMnemonic" : "HSA"
+  }, {
+    "fieldId" : 24,
+    "type" : "LONG",
+    "name" : "hydrogenSulfideMax",
+    "documentation" : "Hydrogen Sulfide (max)",
+    "longMnemonic" : "HSX",
+    "shortMnemonic" : "HSX"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 28,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}

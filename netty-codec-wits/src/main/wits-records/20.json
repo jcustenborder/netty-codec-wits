@@ -1,0 +1,461 @@
+{
+  "name" : "MudReportRecord",
+  "documentation" : "Manually-entered data for each mud report. Record is sent when new data values are available",
+  "recordId" : 20,
+  "fields" : [ {
+    "fieldId" : 1,
+    "type" : "STRING",
+    "name" : "wellId",
+    "documentation" : "Well Identifier",
+    "longMnemonic" : "WELLID",
+    "shortMnemonic" : "WID"
+  }, {
+    "fieldId" : 2,
+    "type" : "SHORT",
+    "name" : "sidetrackHoleSectNo",
+    "documentation" : "Sidetrack/Hole Sect No.",
+    "longMnemonic" : "STKNUM",
+    "shortMnemonic" : "SKNO"
+  }, {
+    "fieldId" : 3,
+    "type" : "SHORT",
+    "name" : "recordId",
+    "documentation" : "Record Identifier",
+    "longMnemonic" : "RECID",
+    "shortMnemonic" : "RID"
+  }, {
+    "fieldId" : 4,
+    "type" : "LONG",
+    "name" : "sequenceId",
+    "documentation" : "Sequence Identifier",
+    "longMnemonic" : "SEQID",
+    "shortMnemonic" : "SQID"
+  }, {
+    "fieldId" : 5,
+    "type" : "LONG",
+    "name" : "date",
+    "documentation" : "Date",
+    "longMnemonic" : "DATE",
+    "shortMnemonic" : "DATE"
+  }, {
+    "fieldId" : 6,
+    "type" : "LONG",
+    "name" : "time",
+    "documentation" : "Time",
+    "longMnemonic" : "TIME",
+    "shortMnemonic" : "TIME"
+  }, {
+    "fieldId" : 7,
+    "type" : "SHORT",
+    "name" : "activityCode",
+    "documentation" : "Activity Code",
+    "longMnemonic" : "ACTCOD",
+    "shortMnemonic" : "ACTC"
+  }, {
+    "fieldId" : 8,
+    "type" : "FLOAT",
+    "name" : "mudReptDepthMeas",
+    "documentation" : "Mud Rept Depth (meas)",
+    "longMnemonic" : "MREPDM",
+    "shortMnemonic" : "MRDM"
+  }, {
+    "fieldId" : 9,
+    "type" : "FLOAT",
+    "name" : "mudReptDepthVert",
+    "documentation" : "Mud Rept Depth (vert)",
+    "longMnemonic" : "MREPDV",
+    "shortMnemonic" : "MRDV"
+  }, {
+    "fieldId" : 10,
+    "type" : "SHORT",
+    "name" : "mudReptNumber",
+    "documentation" : "Mud Rept Number",
+    "longMnemonic" : "MREPNUM",
+    "shortMnemonic" : "MNUM"
+  }, {
+    "fieldId" : 11,
+    "type" : "STRING",
+    "name" : "mudReptMudType",
+    "documentation" : "Mud Rept Mud Type",
+    "longMnemonic" : "MRMTYPE",
+    "shortMnemonic" : "MTYP"
+  }, {
+    "fieldId" : 12,
+    "type" : "STRING",
+    "name" : "mudReptSampleLocation",
+    "documentation" : "Mud Rept Sample Location",
+    "longMnemonic" : "MRSLOC",
+    "shortMnemonic" : "MLOC"
+  }, {
+    "fieldId" : 13,
+    "type" : "LONG",
+    "name" : "mudReptSampleDate",
+    "documentation" : "Mud Rept Sample Date",
+    "longMnemonic" : "MRSDATE",
+    "shortMnemonic" : "MDAT"
+  }, {
+    "fieldId" : 14,
+    "type" : "LONG",
+    "name" : "mudReptSampleTime",
+    "documentation" : "Mud Rept Sample Time",
+    "longMnemonic" : "MRSTIME",
+    "shortMnemonic" : "MTIM"
+  }, {
+    "fieldId" : 15,
+    "type" : "FLOAT",
+    "name" : "mudReptMudDensity",
+    "documentation" : "Mud Rept Mud Density",
+    "longMnemonic" : "MRDENS",
+    "shortMnemonic" : "MDEN"
+  }, {
+    "fieldId" : 16,
+    "type" : "SHORT",
+    "name" : "mudReptFunnelVis",
+    "documentation" : "Mud Rept Funnel Vis",
+    "longMnemonic" : "MRFVIS",
+    "shortMnemonic" : "MFV"
+  }, {
+    "fieldId" : 17,
+    "type" : "FLOAT",
+    "name" : "mudReptFunnelVisTemp",
+    "documentation" : "Mud Rept Funnel Vis Temp",
+    "longMnemonic" : "MRFVIST",
+    "shortMnemonic" : "MFVT"
+  }, {
+    "fieldId" : 18,
+    "type" : "FLOAT",
+    "name" : "mudReptPlasticVis",
+    "documentation" : "Mud Rept Plastic Vis",
+    "longMnemonic" : "MRPV",
+    "shortMnemonic" : "MPV"
+  }, {
+    "fieldId" : 19,
+    "type" : "FLOAT",
+    "name" : "mudReptYieldPoint",
+    "documentation" : "Mud Rept Yield Point",
+    "longMnemonic" : "MRYP",
+    "shortMnemonic" : "MYP"
+  }, {
+    "fieldId" : 20,
+    "type" : "FLOAT",
+    "name" : "mudReptGel10Sec",
+    "documentation" : "Mud Rept Gel - 10 sec",
+    "longMnemonic" : "MRGEL10S",
+    "shortMnemonic" : "MGL1"
+  }, {
+    "fieldId" : 21,
+    "type" : "FLOAT",
+    "name" : "mudReptGel10Min",
+    "documentation" : "Mud Rept Gel - 10 min",
+    "longMnemonic" : "MRGEL10M",
+    "shortMnemonic" : "MGL2"
+  }, {
+    "fieldId" : 22,
+    "type" : "FLOAT",
+    "name" : "mudReptGel30Min",
+    "documentation" : "Mud Rept Gel - 30 min",
+    "longMnemonic" : "MRGEL30M",
+    "shortMnemonic" : "MGL3"
+  }, {
+    "fieldId" : 23,
+    "type" : "FLOAT",
+    "name" : "mudReptFiltrate",
+    "documentation" : "Mud Rept Filtrate",
+    "longMnemonic" : "MRFILT",
+    "shortMnemonic" : "MFIL"
+  }, {
+    "fieldId" : 24,
+    "type" : "SHORT",
+    "name" : "mudReptFilterCake",
+    "documentation" : "Mud Rept Filter Cake",
+    "longMnemonic" : "MRCAKE",
+    "shortMnemonic" : "MCAK"
+  }, {
+    "fieldId" : 25,
+    "type" : "FLOAT",
+    "name" : "mudReptHthpTemp",
+    "documentation" : "Mud Rept HTHP Temp",
+    "longMnemonic" : "MRHT",
+    "shortMnemonic" : "MHT"
+  }, {
+    "fieldId" : 26,
+    "type" : "FLOAT",
+    "name" : "mudReptHthpPressure",
+    "documentation" : "Mud Rept HTHP Pressure",
+    "longMnemonic" : "MRHP",
+    "shortMnemonic" : "MHP"
+  }, {
+    "fieldId" : 27,
+    "type" : "FLOAT",
+    "name" : "mudReptHthpFiltrate",
+    "documentation" : "Mud Rept HTHP Filtrate",
+    "longMnemonic" : "MRHFILT",
+    "shortMnemonic" : "MHFI"
+  }, {
+    "fieldId" : 28,
+    "type" : "SHORT",
+    "name" : "mudReptHthpFilterCake",
+    "documentation" : "Mud Rept HTHP Filter Cake",
+    "longMnemonic" : "MRHCAKE",
+    "shortMnemonic" : "MHCK"
+  }, {
+    "fieldId" : 29,
+    "type" : "FLOAT",
+    "name" : "mudReptSolidsRetort",
+    "documentation" : "Mud Rept Solids % (retort)",
+    "longMnemonic" : "MRSOLRET",
+    "shortMnemonic" : "MSOL"
+  }, {
+    "fieldId" : 30,
+    "type" : "FLOAT",
+    "name" : "mudReptWaterRetort",
+    "documentation" : "Mud Rept Water % (retort)",
+    "longMnemonic" : "MRWATRET",
+    "shortMnemonic" : "MWAT"
+  }, {
+    "fieldId" : 31,
+    "type" : "FLOAT",
+    "name" : "mudReptOilRetort",
+    "documentation" : "Mud Rept Oil % (retort)",
+    "longMnemonic" : "MROILRET",
+    "shortMnemonic" : "MOIL"
+  }, {
+    "fieldId" : 32,
+    "type" : "FLOAT",
+    "name" : "mudReptSand",
+    "documentation" : "Mud Rept Sand %",
+    "longMnemonic" : "MRSAND",
+    "shortMnemonic" : "MSAN"
+  }, {
+    "fieldId" : 33,
+    "type" : "FLOAT",
+    "name" : "mudReptLowGravSol",
+    "documentation" : "Mud Rept Low Grav Sol %",
+    "longMnemonic" : "MRLGSOL",
+    "shortMnemonic" : "MLGS"
+  }, {
+    "fieldId" : 34,
+    "type" : "FLOAT",
+    "name" : "mudReptSolidsCalc",
+    "documentation" : "Mud Rept Solids % (calc)",
+    "longMnemonic" : "MRSOLCAL",
+    "shortMnemonic" : "MSCA"
+  }, {
+    "fieldId" : 35,
+    "type" : "FLOAT",
+    "name" : "mudReptBariteContent",
+    "documentation" : "Mud Rept Barite content",
+    "longMnemonic" : "MRBARITE",
+    "shortMnemonic" : "MBRT"
+  }, {
+    "fieldId" : 36,
+    "type" : "FLOAT",
+    "name" : "mudReptLcmContent",
+    "documentation" : "Mud Rept LCM content",
+    "longMnemonic" : "MRLCM",
+    "shortMnemonic" : "MLCM"
+  }, {
+    "fieldId" : 37,
+    "type" : "FLOAT",
+    "name" : "mudReptMbtCapacity",
+    "documentation" : "Mud Rept MBT capacity",
+    "longMnemonic" : "MRMBT",
+    "shortMnemonic" : "MMBT"
+  }, {
+    "fieldId" : 38,
+    "type" : "FLOAT",
+    "name" : "mudReptPh",
+    "documentation" : "Mud Rept pH",
+    "longMnemonic" : "MRPH",
+    "shortMnemonic" : "MPH"
+  }, {
+    "fieldId" : 39,
+    "type" : "FLOAT",
+    "name" : "mudReptPhSampleTemp",
+    "documentation" : "Mud Rept pH sample temp",
+    "longMnemonic" : "MRPHT",
+    "shortMnemonic" : "MPHT"
+  }, {
+    "fieldId" : 40,
+    "type" : "FLOAT",
+    "name" : "mudReptPm",
+    "documentation" : "Mud Rept Pm",
+    "longMnemonic" : "MRPM",
+    "shortMnemonic" : "MPM"
+  }, {
+    "fieldId" : 41,
+    "type" : "FLOAT",
+    "name" : "mudReptPf",
+    "documentation" : "Mud Rept Pf",
+    "longMnemonic" : "MRPF",
+    "shortMnemonic" : "MPF"
+  }, {
+    "fieldId" : 42,
+    "type" : "FLOAT",
+    "name" : "mudReptMf",
+    "documentation" : "Mud Rept Mf",
+    "longMnemonic" : "MRMF",
+    "shortMnemonic" : "MMF"
+  }, {
+    "fieldId" : 43,
+    "type" : "FLOAT",
+    "name" : "mudReptP1",
+    "documentation" : "Mud Rept P1",
+    "longMnemonic" : "MRP1",
+    "shortMnemonic" : "MRP1"
+  }, {
+    "fieldId" : 44,
+    "type" : "FLOAT",
+    "name" : "mudReptP2",
+    "documentation" : "Mud Rept P2",
+    "longMnemonic" : "MRP2",
+    "shortMnemonic" : "MRP2"
+  }, {
+    "fieldId" : 45,
+    "type" : "FLOAT",
+    "name" : "mudReptChlorides",
+    "documentation" : "Mud Rept Chlorides",
+    "longMnemonic" : "MRCHLOR",
+    "shortMnemonic" : "MCHL"
+  }, {
+    "fieldId" : 46,
+    "type" : "FLOAT",
+    "name" : "mudReptCalcium",
+    "documentation" : "Mud Rept Calcium",
+    "longMnemonic" : "MRCALC",
+    "shortMnemonic" : "MCAL"
+  }, {
+    "fieldId" : 47,
+    "type" : "FLOAT",
+    "name" : "mudReptMagnesium",
+    "documentation" : "Mud Rept Magnesium",
+    "longMnemonic" : "MRMAG",
+    "shortMnemonic" : "MMAG"
+  }, {
+    "fieldId" : 48,
+    "type" : "FLOAT",
+    "name" : "mudReptPotassium",
+    "documentation" : "Mud Rept Potassium",
+    "longMnemonic" : "MRPOT",
+    "shortMnemonic" : "MPOT"
+  }, {
+    "fieldId" : 49,
+    "type" : "FLOAT",
+    "name" : "mudReptRheometerTemp",
+    "documentation" : "Mud Rept Rheometer temp",
+    "longMnemonic" : "MRRHETEM",
+    "shortMnemonic" : "MRHT"
+  }, {
+    "fieldId" : 50,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom3Rpm",
+    "documentation" : "Mud Rept Viscom 3 rpm",
+    "longMnemonic" : "MRVIS3",
+    "shortMnemonic" : "M3"
+  }, {
+    "fieldId" : 51,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom6Rpm",
+    "documentation" : "Mud Rept Viscom 6 rpm",
+    "longMnemonic" : "MRVIS6",
+    "shortMnemonic" : "M6"
+  }, {
+    "fieldId" : 52,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom100Rpm",
+    "documentation" : "Mud Rept Viscom 100 rpm",
+    "longMnemonic" : "MRVIS100",
+    "shortMnemonic" : "M100"
+  }, {
+    "fieldId" : 53,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom200Rpm",
+    "documentation" : "Mud Rept Viscom 200 rpm",
+    "longMnemonic" : "MRVIS200",
+    "shortMnemonic" : "M200"
+  }, {
+    "fieldId" : 54,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom300Rpm",
+    "documentation" : "Mud Rept Viscom 300 rpm",
+    "longMnemonic" : "MRVIS300",
+    "shortMnemonic" : "M300"
+  }, {
+    "fieldId" : 55,
+    "type" : "FLOAT",
+    "name" : "mudReptViscom600Rpm",
+    "documentation" : "Mud Rept Viscom 600 rpm",
+    "longMnemonic" : "MRVIS600",
+    "shortMnemonic" : "M600"
+  }, {
+    "fieldId" : 56,
+    "type" : "FLOAT",
+    "name" : "mudReptBrine",
+    "documentation" : "Mud Rept Brine %",
+    "longMnemonic" : "MRBRINE",
+    "shortMnemonic" : "MBRI"
+  }, {
+    "fieldId" : 57,
+    "type" : "FLOAT",
+    "name" : "mudReptAlkalinity",
+    "documentation" : "Mud Rept Alkalinity",
+    "longMnemonic" : "MRALK",
+    "shortMnemonic" : "MALK"
+  }, {
+    "fieldId" : 58,
+    "type" : "FLOAT",
+    "name" : "mudReptLimeContent",
+    "documentation" : "Mud Rept Lime content",
+    "longMnemonic" : "MRLIME",
+    "shortMnemonic" : "MLIM"
+  }, {
+    "fieldId" : 59,
+    "type" : "FLOAT",
+    "name" : "mudReptElectStability",
+    "documentation" : "Mud Rept Elect. Stability",
+    "longMnemonic" : "MRELECST",
+    "shortMnemonic" : "MELS"
+  }, {
+    "fieldId" : 60,
+    "type" : "FLOAT",
+    "name" : "mudReptCaclWt",
+    "documentation" : "Mud Rept CaCl, Wt %",
+    "longMnemonic" : "MRCACL",
+    "shortMnemonic" : "MCCL"
+  }, {
+    "fieldId" : 61,
+    "type" : "FLOAT",
+    "name" : "spare1",
+    "documentation" : "SPARE 1",
+    "longMnemonic" : "SPARE1",
+    "shortMnemonic" : "SPR1"
+  }, {
+    "fieldId" : 62,
+    "type" : "FLOAT",
+    "name" : "spare2",
+    "documentation" : "SPARE 2",
+    "longMnemonic" : "SPARE2",
+    "shortMnemonic" : "SPR2"
+  }, {
+    "fieldId" : 63,
+    "type" : "FLOAT",
+    "name" : "spare3",
+    "documentation" : "SPARE 3",
+    "longMnemonic" : "SPARE3",
+    "shortMnemonic" : "SPR3"
+  }, {
+    "fieldId" : 64,
+    "type" : "FLOAT",
+    "name" : "spare4",
+    "documentation" : "SPARE 4",
+    "longMnemonic" : "SPARE4",
+    "shortMnemonic" : "SPR4"
+  }, {
+    "fieldId" : 65,
+    "type" : "FLOAT",
+    "name" : "spare5",
+    "documentation" : "SPARE 5",
+    "longMnemonic" : "SPARE5",
+    "shortMnemonic" : "SPR5"
+  } ]
+}
